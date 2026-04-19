@@ -3,32 +3,22 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 琅琊驿站
-subtitle: 记录生活与学习的点点滴滴！
-description: 一个中年中登，爱生活，爱猫咪，爱钓鱼，爱养花
-keywords: 琅琊,IT,博客,技术分享,个人博客,hexo
-author: 琅琊小全子
+title: 琅琊散记BLOG
+subtitle: 技术分享 & 记录生活
+description: 一个不会写代码会画画的运营，分享日常生活，爱养猫，爱钓鱼，爱养花，爱分享。
+keywords: Hexo,前端开发,编程,技术博客,琅琊,博客,blog,运营,分享,钓鱼
+author: 琅琊
 language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://www.langya.org.cn
-permalink: :category/:abbrlink.html
-#permalink: :abbrlink.html  # 不需要目录，直接根目录+数字.html，用这行
-
-# abbrlink插件配置
-abbrlink:
-  alg: crc16   # 算法：crc16生成4位数字，crc32生成8位数字
-  rep: dec     # 进制：dec十进制数字，hex十六进制
-  # 示例：crc16+dec 生成 https://123123.com/mulu/1234.html
-  # 示例：crc32+dec 生成 https://123123.com/mulu/12345678.html
-
-
+url: http://langya.org.cn
+permalink: /:category/:auto_id.html
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -39,7 +29,6 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -78,8 +67,13 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+    智能家居: znjj
+    网站建设: wzjs
+    日常分享: rcfx
 tag_map:
-
+    hexo教程: hexo-tutorial
+    面试经验: interview
+    建站: site-building
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
@@ -88,7 +82,7 @@ meta_generator: true
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
+date_format: YYYY年MM月DD日
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
 updated_option: 'mtime'
@@ -112,21 +106,17 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 
-
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root: '/child/'
-
-
-
-  
-# URL
-#url: https://zhengquanstudio.github.io/hexo/
-#root: /hexo/
-
-
-# Deployment
 deploy:
-  type: 
-  repo: 
-#  branch: 
+  type: git
+  repo: git@github.com:zhengquanstudio/hexo.git
+  # 你的GitHub仓库地址
+  branch: main 
+  # 分支（通常main/master）
   
+
+# 自动 ID 配置
+front_matter:
+  auto_id:
+    enable: true
+    start: 1
+    step: 1

@@ -11,35 +11,28 @@
 
 nav:
   # Navigation bar logo image
-  logo: 
+  logo:
   display_title: true
   display_post_title: true
   # Whether to fix navigation bar
-  fixed: true
+  fixed: false
 
 menu:
    Home: / || fas fa-home
-   List||fas fa-list:
-     Music: /music/ || fas fa-music
-     Movie: /movies/ || fas fa-video
+  # List||fas fa-list:
+  #   Music: /music/ || fas fa-music
+  #   Movie: /movies/ || fas fa-video
+  #分类: /categories/ || fas fa-folder-open
+  #标签: /tags/ || fas fa-tags
    关于: /about/ || fas fa-user
    友链: /links/ || fas fa-link
-#    首页: / || fas fa-home
-#    归档: /archives/ || fas fa-archive
-#    分类||fas fa-list: # 二级菜单
-#    技术笔记: /categories/技术笔记/ || fas fa-code
-#    生活杂谈: /categories/生活杂谈/ || fas fa-coffee
-
-
-
-
 # --------------------------------------
 # Code Blocks Settings
 # --------------------------------------
 
 code_blocks:
   # Code block theme: darker / pale night / light / ocean / false
-  theme: ocean
+  theme: light
   macStyle: true
   # Code block height limit (unit: px)
   height_limit: false
@@ -52,20 +45,12 @@ code_blocks:
   shrink: false
   fullpage: false
 
-links:
-  enable: true
-  # 从 _data/links.yml 读取友链
-  data: 
-  links: /_data/links.yml
-
-
 # Social media links
 # Formal:
 #   icon: link || the description || color
 social:
    fab fa-github: https://github.com/zhengquanstudio || Github || '#24292e'
    fas fa-envelope: mailto:zhengquan@163.com || Email || '#4a7dbe'
-#   fab fa-weixin: /img/wechat-qr.png || 微信 || '#07C160' 
    fab fa-weibo: https://weibo.com/laisy2089 || 微博 || '#E6162D'
 # --------------------------------------
 # Image Settings
@@ -79,15 +64,17 @@ avatar:
 
 # Disable all banner images
 disable_top_img: false
- 
+
 # If the banner of page not setting, it will show the default_top_img
-default_top_img: /img/banner-default.png
+default_top_img:
 
 # The banner image of index page
-index_img: /img/index-banner.png
-   
+index_img:
+  
+
+
 # The banner image of archive page
-archive_img: /img/archive-banner.png
+archive_img:
 
 # Note: tag page, not tags page
 tag_img:
@@ -111,8 +98,9 @@ footer_img: false
 # Website Background
 # Can set it to color, image URL or an array containing colors and/or image URLs
 # If an array is provided, a random background will be selected from the array on each load
-background: #FFF
-   
+background:
+
+  
 cover:
   # Disable the cover or not
   index_enable: true
@@ -129,8 +117,8 @@ error_img:
 
 # A simple 404 page
 error_404:
-  enable: true
-  subtitle: '网页走丢啦~~'
+  enable: false
+  subtitle: 'Page Not Found'
   background: /img/error-page.png
 
 post_meta:
@@ -158,14 +146,12 @@ post_meta:
 # Index page settings
 # --------------------------------------
 
-#index_img:
-#swiper_index: 5000
 # The top_img settings of home page
 # default: top img - full screen, site info - middle
 # The position of site info, eg: 300px/300em/300rem/10%
-index_site_info_top: 50%
+index_site_info_top:
 # The height of top_img, eg: 300px/300em/300rem
-index_top_img_height: 1280px
+index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
@@ -182,9 +168,9 @@ subtitle:
   # 1 - hitokoto.cn
   # 2 - https://api.aa1.cn/doc/yiyan.html
   # 3 - jinrishici.com
-  source: 3
+  source: 1
   # If you close the typewriter effect, the subtitle will only show the first line of sub
-  sub: 保持热爱，奔赴山海
+  sub:
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
@@ -222,7 +208,7 @@ toc:
 post_copyright:
   enable: true
   decode: false
-  author_href: https://langya.org.cn
+  author_href:
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -262,15 +248,15 @@ post_pagination: 1
 
 # Displays outdated notice for a post
 noticeOutdate:
-  enable: true
+  enable: false
   # Style: simple / flat
   style: flat
   # When will it be shown
   limit_day: 365
   # Position: top / bottom
   position: top
-  message_prev: 距离最后更新已
-  message_next: 天，内容可能已经过期。
+  message_prev: It has been
+  message_next: days since the last update, the content of the article may be outdated.
 
 # --------------------------------------
 # Footer Settings
@@ -282,12 +268,10 @@ footer:
     since: 2026
   # Copyright of theme and framework
   copyright:
-    enable: false
-    version: false
-#    powered: false
-#    enable: false
-  custom_text: 
-  
+    enable: true
+    version: true
+  custom_text:
+
 # --------------------------------------
 # Aside Settings
 # --------------------------------------
@@ -310,17 +294,18 @@ aside:
     button:
       enable: true
       icon: fab fa-github
-      text: 点击关注我~
+      text: 点击关注
       link: https://github.com/zhengquanstudio
   card_announcement:
     enable: true
     content: |
-      <p>欢迎来到我的博客~</p>
+     <p>欢迎来到我的博客~</p>
       <p>有问题或想交流，欢迎加我微信👇</p>
       <img src="/img/wechat-qr.png" 
            alt="微信二维码" 
            style="max-width: 150px; display: block; margin: 10px auto; border-radius: 8px;">
       <p style="font-size: 12px; color: #999;">扫码备注「博客」即可</p>
+
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -345,8 +330,8 @@ aside:
   card_tags:
     enable: true
     # If set 0 will show all
-    limit: 0
-    color: true
+    limit: 40
+    color: false
     custom_colors:
     # Order of tags, random/name/length
     orderby: random
@@ -380,7 +365,7 @@ aside:
     # Time difference between publish date and now
     # Formal: Month/Day/Year Time or Year/Month/Day Time
     # Leave it empty if you don't enable this feature
-    runtime_date: 2026/04/16 00:00:00
+    runtime_date:  2026/04/18 00:00:00   # 改成你的建站日期
 
 # --------------------------------------
 # Bottom right button
@@ -415,7 +400,7 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: 1
+  autoChangeMode: false
   # Set the light mode time. The value is between 0 and 24. If not set, the default value is 6 and 18
   start:
   end:
@@ -442,22 +427,22 @@ rightside_config_animation: true
 
 anchor:
   # When you scroll, the URL will update according to header id.
-  auto_update: true
+  auto_update: false
   # Click the headline to scroll and update the anchor
-  click_to_scroll: true
+  click_to_scroll: false
 
-photofigcaption: false
+photofigcaption: true
 
 copy:
   enable: true
   # Add the copyright information after copied content
   copyright:
     enable: true
-    limit_count: 100
+    limit_count: 150
 
 # Need to install the hexo-wordcount plugin
 wordcount:
-  enable: true
+  enable: false
   # Display the word count of the article in post meta
   post_wordcount: true
   # Display the time to read the article in post meta
@@ -545,12 +530,12 @@ share:
   # Share.js
   # https://github.com/overtrue/share.js
   sharejs:
-    sites: facebook,x,wechat,weibo,qq
+    sites: wechat,weibo,qq
 
   # AddToAny
   # https://www.addtoany.com/
   addtoany:
-    item: facebook,x,wechat,sina_weibo,facebook_messenger,email,copy_link
+    item: wechat,sina_weibo,email,copy_link
 
 # --------------------------------------
 # Comments System
@@ -561,16 +546,16 @@ comments:
   # Leave it empty if you don't need comments
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
   # Format of two comments system : Disqus,Waline
-  use:
+  use: 
   # Display the comment name next to the button
   text: true
   # Lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
-  lazyload: false
+  lazyload: true
   # Display comment count in post's top_img
-  count: false
+  count: true
   # Display comment count in Home Page
-  card_post_count: false
+  card_post_count: true
 
 # Disqus
 # https://disqus.com/
@@ -692,9 +677,9 @@ chat:
   use:
   # Chat Button [recommend]
   # It will create a button in the bottom right corner of website, and hide the origin button
-  rightside_button: false
+  rightside_button: true
   # The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down
-  button_hide_show: false
+  button_hide_show: true
 
 # https://chatra.io/
 chatra:
@@ -713,13 +698,14 @@ crisp:
 # --------------------------------------
 
 # https://tongji.baidu.com/web/welcome/login
-baidu_analytics:
+baidu_analytics: a702d43d1c6073e60952b8d4feb515d7
+
 
 # https://analytics.google.com/analytics/web/
 google_analytics:
 
 # https://www.cloudflare.com/zh-tw/web-analytics/
-cloudflare_analytics:
+cloudflare_analytics: 5a6865dfc05e4a51be339e4fa169f7b5
 
 # https://clarity.microsoft.com/
 microsoft_clarity:
@@ -890,7 +876,7 @@ canvas_ribbon:
 
 # Fluttering Ribbon
 canvas_fluttering_ribbon:
-  enable: false
+  enable: true
   mobile: false
 
 # canvas_nest
@@ -909,7 +895,7 @@ canvas_nest:
 
 # Mouse click effects: fireworks
 fireworks:
-  enable: false
+  enable: true
   zIndex: 9999
   mobile: false
 
@@ -937,7 +923,7 @@ clickShowText:
 # https://github.com/francoischalifour/medium-zoom
 # https://fancyapps.com/fancybox/
 # Leave it empty if you don't need lightbox
-lightbox:
+lightbox: fancybox
 
 # --------------------------------------
 # Tag Plugins settings
@@ -1026,7 +1012,7 @@ aplayerInject:
 # https://github.com/polonel/SnackBar
 # position: top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-  enable: false
+  enable: true
   position: bottom-left
   # The background color of Toast Notification in light mode and dark mode
   bg_light: '#49b1f5'
@@ -1034,7 +1020,7 @@ snackbar:
 
 # Instant.page
 # https://instant.page/
-instantpage: false
+instantpage: true
 
 # Lazyload
 # https://github.com/verlok/vanilla-lazyload
@@ -1088,7 +1074,30 @@ inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
-    # - <script src="xxxx"></script>
+  - |
+      <script>
+      // 1. 首页 Banner 随机背景
+      document.addEventListener("DOMContentLoaded", function() {
+        const bannerImgs = [
+          "/img/index-banner-1.png",
+          "/img/index-banner-2.png",
+          "/img/index-banner-3.png",
+          "/img/index-banner-4.png"
+        ];
+        const randomBanner = bannerImgs[Math.floor(Math.random() * bannerImgs.length)];
+        
+        // 兼容不同版本的选择器
+        const bannerEl = document.querySelector("#page-header .full-img") || 
+                         document.querySelector("#page-header");
+        if (bannerEl) {
+          bannerEl.style.backgroundImage = `url(${randomBanner})`;
+          bannerEl.style.backgroundSize = "cover";
+          bannerEl.style.backgroundPosition = "center";
+        }
+      });
+      </script>
+  
+        # - <script src="xxxx"></script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
@@ -1162,41 +1171,3 @@ CDN:
     # valine:
     # waline_css:
     # waline_js:
-# 自动生成站点地图（SEO必备）
-sitemap:
-  path: sitemap.xml
-  rel: true
-  tags: true
-  categories: true
-
-# 自动生成robots.txt，控制爬虫抓取
-robots:
-  User-agent: "*"
-  Allow: /
-  Sitemap: https://langya.org.cn/sitemap.xml
-  
-  # HTML压缩配置
-html_minifier:
-  enable: true
-  exclude:
-  removeComments: true  # 移除代码注释
-  collapseWhitespace: true  # 折叠空白字符
-  minifyJS: true
-  minifyCSS: true
-
-# CSS压缩配置
-clean_css:
-  enable: true
-  exclude:
-    - "*.min.css"
-
-# JS压缩配置
-uglify_js:
-  enable: true
-  mangle: true
-  output:
-    comments: false
-  compress:
-    drop_console: true  # 移除console打印语句
-  exclude:
-    - "*.min.js"
