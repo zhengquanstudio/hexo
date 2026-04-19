@@ -138,13 +138,19 @@ category_img:
 #  - category name: xxxxx
 category_per_img:
 
-# The background image of footer
-footer_img: false
 
+#页脚背景图
+# The background image of footer
+footer_img: 
+ 
+ 
 # Website Background
 # Can set it to color, image URL or an array containing colors and/or image URLs
 # If an array is provided, a random background will be selected from the array on each load
+
+
 background:
+
 
 # 文章封面图
   
@@ -336,15 +342,70 @@ noticeOutdate:
 # Footer Settings
 # --------------------------------------
 footer:
+  # 底部背景图（你截图里的那种插画）
+  background:  # 把图片放到 source/img/ 下
+  # 底部文字透明度
+  opacity: 1
   nav:
+    - content:
+        - title: 文档
+          item:
+            - title: 🚀 快速开始
+              url: /posts/21cfbf15/
+            - title: 📑 主题页面
+              url: /posts/dc584b87/
+            - title: 📌 主题配置
+              url: /posts/4aa8abbe/
+            - title: ⚔️ 标签外挂
+              url: /posts/ceeb73f/
+            - title: ❓ 主题问答
+              url: /posts/98d20436/
+            - title: ⚡️ 进阶教程
+              url: /posts/4073eda/
+    - content:
+        - title: 其他
+          item:
+            - title: 图库
+              url: /Gallery/
+            - title: 留言板
+              url: /messageboard/
+            - title: 说说
+              url: /talking/
+            - title: 示例
+              url: /link/
+            - title: 友链
+              url: /links/
+    - content:
+        - title: 框架
+          item:
+            - title: Hexo
+              url: https://hexo.io/zh-cn/
+            - title: Butterfly
+              url: https://butterfly.js.org/
+    - content:
+        - title: 赞助
+          item:
+            - title: 支付宝
+              url:
+              html: "<img src='/img/alipay.jpg' alt='Alipay' width='80px' height='80px'>"
+        - title: 
+          item:
+            - title: 微信
+              url:
+              html: "<img src='/img/wechat.png' alt='WeChat' width='80px' height='80px'>"
+
+
+
   owner:
-    enable: true
+    enable: false
     since: 2026
   # Copyright of theme and framework
   copyright:
-    enable: true
-    version: true
-  custom_text:
+    enable: false
+    version: false
+  custom_text: "<div style='text-align:center'>© 2025-2026 琅琊 | 保留所有权利</div>"
+ 
+
 
 # --------------------------------------
 # Aside Settings
@@ -1199,7 +1260,7 @@ inject:
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
   - |
-      <script>
+     <script>
       // 1. 首页 Banner 随机背景
       document.addEventListener("DOMContentLoaded", function() {
         const bannerImgs = [
@@ -1209,19 +1270,38 @@ inject:
           "/img/index-banner-4.png"
         ];
         const randomBanner = bannerImgs[Math.floor(Math.random() * bannerImgs.length)];
-        
-        // 兼容不同版本的选择器
-        const bannerEl = document.querySelector("#page-header .full-img") || 
-                         document.querySelector("#page-header");
+        const bannerEl = document.querySelector("#page-header .full-img") || document.querySelector("#page-header");
         if (bannerEl) {
           bannerEl.style.backgroundImage = `url(${randomBanner})`;
           bannerEl.style.backgroundSize = "cover";
           bannerEl.style.backgroundPosition = "center";
         }
       });
+      // 2. 底部 Footer 随机背景（高度380px 修复版）
+      // 底部随机背景 + 高度380px + 文字不跑偏
+      document.addEventListener("DOMContentLoaded", function() {
+        const footerImgs = [
+          "/img/footer-bg-1.png",
+          "/img/footer-bg-2.png",
+          "/img/footer-bg-3.png",
+          "/img/footer-bg-4.png"
+        ];
+        const randomFooter = footerImgs[Math.floor(Math.random() * footerImgs.length)];
+        const footerEl = document.getElementById("footer");
+
+        if (footerEl) {
+          footerEl.style.backgroundImage = `url(${randomFooter})`;
+          footerEl.style.backgroundSize = "cover";
+          footerEl.style.backgroundPosition = "center";
+          footerEl.style.backgroundRepeat = "no-repeat";
+          
+          // 只保留背景，不修改任何高度、内边距
+          // 完全恢复原生布局！
+        }
+      });
       </script>
-  
-        # - <script src="xxxx"></script>
+ 
+
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
