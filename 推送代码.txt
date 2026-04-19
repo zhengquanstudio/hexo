@@ -1,0 +1,22 @@
+hexo clean && hexo g && hexo s
+
+
+hexo clean && hexo g && hexo d
+
+
+每次修改博客内容：
+保存源码更改：
+git add .
+git commit -m "更新内容"
+git push
+生成并部署：
+hexo clean
+hexo generate
+hexo deploy
+这样既更新了源码备份，又发布了最新博客版本。
+
+
+
+git add .
+git commit -m "更新导航/文章"
+git push
