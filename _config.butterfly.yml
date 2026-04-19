@@ -1104,13 +1104,13 @@ instantpage: true
 # Lazyload
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
-  enable: false
+  enable: true
   # Use browser's native lazyload instead of vanilla-lazyload
   native: false
   # Specify the field to use lazyload (site or post)
   field: site
   placeholder:
-  blur: false
+  blur: true
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
@@ -1180,12 +1180,17 @@ inject:
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
+
+# ==========================================
+# CDN 加速（开启后本地图片自动转 jsDelivr）
+# ==========================================
+
 CDN:
   # The CDN provider for internal and third-party scripts
   # Options for both: local/jsdelivr/unpkg/cdnjs/custom
   # Note: Dev version can only use 'local' for internal scripts
   # Note: When setting third-party scripts to 'local', you need to install hexo-butterfly-extjs
-  internal_provider: local
+  internal_provider: jsdelivr  # 改成 jsdelivr
   third_party_provider: jsdelivr
 
   # Add version number to url, true or false
@@ -1194,6 +1199,10 @@ CDN:
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
   custom_format:
+
+  # 图片 CDN 自动加速（你新增这 2 行）
+  host: https://cdn.jsdelivr.net/gh/zhengquanstudio/hexo@main
+  enable: true
 
   option:
     # abcjs_basic_js:
