@@ -1,0 +1,12 @@
+- date: 2024-09-22  # 时间
+  content: "第二条说说" # 内容
+  image:
+    - /img/avatar.png # 配图，支持多张
+  tags:
+    - 头像 # 标签，会显示在左下角
+  link: "" # 可选，跳转链接
+
+- date: 2024-09-21
+  content: "第一条说说"
+  tags:
+    - 自言自语

@@ -1,0 +1,44 @@
+/* 时间线美化 */
+#archive-page .article-sort {
+  position: relative;
+  padding-left: 40px;
+}
+#archive-page .article-sort::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--primary-color);
+  opacity: 0.3;
+}
+#archive-page .article-sort-title::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+#archive-page .article-sort-item::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 22px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--primary-color);
+}
+#archive-page .article-sort-item__wrap {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  margin-bottom: 15px;
+}

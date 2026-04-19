@@ -24,11 +24,42 @@ menu:
   #   Movie: /movies/ || fas fa-video
   #分类: /categories/ || fas fa-folder-open
   #标签: /tags/ || fas fa-tags
-   微语: /weiyu/ || fa-solid fa-comment-dots 
-   关于: /about/ || fas fa-user
+
+   说说: /talk/ || fa-solid fa-comment-dots
+   归档: /archives/ || fas fa-archive    
    友链: /links/ || fas fa-link
+   关于: /about/ || fas fa-user
 
 
+
+
+# --------------------------------------
+# 说说 / 微语 功能配置
+# --------------------------------------
+# 官方文档：https://butterfly.js.org/posts/a7030606/
+# --------------------------------------
+
+# 开启说说功能
+talk:
+  enable: true
+  # 说说页面路径，你可以自定义为 /weiyu/
+  path: /talk/
+  # 每页显示多少条
+  pageSize: 10
+  # 是否开启评论
+  comments: true
+  # 置顶说说
+  top: false
+
+# 说说页面随机顶图
+
+  top_img: |
+    - /img/shuoshuo-bg-1.png
+    - /img/shuoshuo-bg-2.png
+    - /img/shuoshuo-bg-3.png
+    - /img/shuoshuo-bg-4.png	
+    - /img/shuoshuou-bg-5.png
+    # 继续加你的图片
 
 # --------------------------------------
 # Code Blocks Settings
@@ -133,7 +164,7 @@ post_meta:
     # Choose: date / relative
     date_format: date
     categories: true
-    tags: false
+    tags: true
     label: true
   post:
     # Choose: left / center
@@ -195,6 +226,9 @@ index_post_content:
   method: 3
   # If you set method to 2 or 3, the length need to config
   length: 500
+
+
+
 
 # --------------------------------------
 # Post Settings
@@ -566,7 +600,7 @@ comments:
   # Leave it empty if you don't need comments
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
   # Format of two comments system : Disqus,Waline
-  use: Giscus
+  use: 
 
   # Display the comment name next to the button
   text: true
@@ -827,6 +861,17 @@ site_verification:
 # leave it empty or index
 category_ui:
 tag_ui:
+
+# --------------------------------------
+# Archives
+# --------------------------------------
+
+# Archives page UI
+# Choose: 1 / 2 / 3
+# 1 =  list   列表式
+# 2 =  card   卡片式
+# 3 =  timeline 时间线样式
+archive_ui: 3
 
 # Rounded corners for UI elements
 rounded_corners_ui: true
