@@ -27,14 +27,14 @@ menu:
   
 # --------------- 下拉菜单 目录 ----------------
   目录 || fas fa-folder:
-    智能家居: /smart/ || fas fa-house
-    技术笔记: /tech/ || fas fa-laptop
-    资源分享: /resources/ || fas fa-share-alt
-    生活随拍: /moments/ || fas fa-camera
-    日常随笔: /essays/ || fas fa-book
+    智能家居: /categories/smart/ || fas fa-house
+    技术笔记: /categories/tech/ || fas fa-laptop
+    资源分享: /categories/share/ || fas fa-share-alt
+    生活随拍: /categories/moments/ || fas fa-camera
+    日常随笔: /categories/essays/ || fas fa-book
     全部文章: /archives/ || fas fa-archive
 # --------------------------------------------
-  
+  图库: /gallery/ || fas fa-images
   标签: /tags/ || fas fa-tags
   说说: /talk/ || fa-solid fa-comment-dots
   归档: /archives/ || fas fa-archive    
@@ -141,7 +141,7 @@ category_per_img:
 
 #页脚背景图
 # The background image of footer
-footer_img: 
+footer_img:  /img/footer-bg-1.png  # 把图片放到 source/img/ 下
  
  
 # Website Background
@@ -150,6 +150,78 @@ footer_img:
 
 
 background:
+
+# --------------------------------------
+# Footer Settings
+# --------------------------------------
+footer:
+
+  background:
+
+  opacity: 1
+  nav:
+    - content:
+        - title: 目录
+          item:
+            - title: 🏠智能家居 
+              url: /smart/
+            - title: 💻技术笔记 
+              url: /tech/
+            - title: 🔍资源分享 
+              url: /share/
+            - title: 📷生活随拍 
+              url: /moments/
+            - title: 🌅日常随笔 
+              url:  /essays/
+            - title: 📖全部文章 
+              url: /archives/
+
+
+    - content:
+        - title: 其他
+          item:
+            - title: 🖼图库
+              url: /Gallery/
+            - title: 💬留言板
+              url: /messageboard/
+            - title: 🗣️说说
+              url: /talk/
+            - title: 🏷️标签
+              url: /tags/
+            - title: 🤙关于
+              url: /about/
+            - title: 🔗友链
+              url: /links/
+    - content:
+        - title: 框架
+          item:
+            - title: Hexo
+              url: https://hexo.io/zh-cn/
+            - title: Butterfly
+              url: https://butterfly.js.org/
+    - content:
+        - title: 赞助
+          item:
+            - title: 支付宝
+              url:
+              html: "<img src='/img/alipay.jpg' alt='Alipay' width='100px' height='100px'>"
+        - title: 
+          item:
+            - title: 微信
+              url:
+              html: "<img src='/img/wechat.png' alt='WeChat' width='100px' height='100px'>"
+
+
+
+  owner:
+    enable: false
+    since: 2026
+  # Copyright of theme and framework
+  copyright:
+    enable: false
+    version: false
+  custom_text: "<div style='text-align:center'>© 2025-2026 琅琊 | 保留所有权利</div>"
+ 
 
 
 # 文章封面图
@@ -163,7 +235,7 @@ cover:
   position: left  # 可选 left / right / both / none
   # 默认封面图（文章没有设置cover时，自动显示这张）
   default_cover:
-    - /img/docs-changelog-cover.png  # 你的默认图路径
+    - /img/cover/docs-changelog-cover.png  # 你的默认图路径
    # - /img/default-cover2.jpg  # 可以放多张，主题会随机显示
 
 # Replace Broken Images
@@ -337,74 +409,6 @@ noticeOutdate:
   position: top
   message_prev: It has been
   message_next: days since the last update, the content of the article may be outdated.
-
-# --------------------------------------
-# Footer Settings
-# --------------------------------------
-footer:
-  # 底部背景图（你截图里的那种插画）
-  background:  # 把图片放到 source/img/ 下
-  # 底部文字透明度
-  opacity: 1
-  nav:
-    - content:
-        - title: 文档
-          item:
-            - title: 🚀 快速开始
-              url: /posts/21cfbf15/
-            - title: 📑 主题页面
-              url: /posts/dc584b87/
-            - title: 📌 主题配置
-              url: /posts/4aa8abbe/
-            - title: ⚔️ 标签外挂
-              url: /posts/ceeb73f/
-            - title: ❓ 主题问答
-              url: /posts/98d20436/
-            - title: ⚡️ 进阶教程
-              url: /posts/4073eda/
-    - content:
-        - title: 其他
-          item:
-            - title: 图库
-              url: /Gallery/
-            - title: 留言板
-              url: /messageboard/
-            - title: 说说
-              url: /talking/
-            - title: 示例
-              url: /link/
-            - title: 友链
-              url: /links/
-    - content:
-        - title: 框架
-          item:
-            - title: Hexo
-              url: https://hexo.io/zh-cn/
-            - title: Butterfly
-              url: https://butterfly.js.org/
-    - content:
-        - title: 赞助
-          item:
-            - title: 支付宝
-              url:
-              html: "<img src='/img/alipay.jpg' alt='Alipay' width='80px' height='80px'>"
-        - title: 
-          item:
-            - title: 微信
-              url:
-              html: "<img src='/img/wechat.png' alt='WeChat' width='80px' height='80px'>"
-
-
-
-  owner:
-    enable: false
-    since: 2026
-  # Copyright of theme and framework
-  copyright:
-    enable: false
-    version: false
-  custom_text: "<div style='text-align:center'>© 2025-2026 琅琊 | 保留所有权利</div>"
- 
 
 
 # --------------------------------------
@@ -623,8 +627,10 @@ math:
 search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
-  use:
-  placeholder:
+  enable: true
+  type: local
+  placeholder: "搜索一下..." # 你想显示的提示文字
+  use: local_search
 
   # Algolia Search
   algolia_search:
@@ -1108,8 +1114,8 @@ clickShowText:
 # https://github.com/francoischalifour/medium-zoom
 # https://fancyapps.com/fancybox/
 # Leave it empty if you don't need lightbox
-lightbox: fancybox
-
+lightbox: true
+lightbox_type: fancybox
 # --------------------------------------
 # Tag Plugins settings
 # --------------------------------------
@@ -1257,12 +1263,42 @@ css_prefix: true
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
   head:
+    - |
+      <style>
+        /* 全局强制：分类页覆盖顶部背景 */
+        body[data-path="/categories/tech/"] #page-header {
+          background-image: url("/img/cover/category-cover-1600x900.jpg") !important;
+        }
+        body[data-path="/categories/smart/"] #page-header {
+          background-image: url("/img/cover/smart-cover.jpg") !important;
+        }
+        body[data-path="/categories/share/"] #page-header {
+          background-image: url("/img/cover/share-cover.jpg") !important;
+        }
+        body[data-path="/categories/moments/"] #page-header {
+          background-image: url("/img/cover/moments-cover.jpg") !important;
+        }
+        body[data-path="/categories/essays/"] #page-header {
+          background-image: url("/img/cover/essays-cover.jpg") !important;
+        }
+      </style>
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
   - |
-     <script>
-      // 1. 首页 Banner 随机背景
+    <script>
       document.addEventListener("DOMContentLoaded", function() {
+        const path = document.body.dataset.path || "";
+
+        // 如果是 分类页 / 标签页 / 文章页 → 不运行随机背景
+        if (
+          path.startsWith("/categories/") || 
+          path.startsWith("/tags/") || 
+          path.startsWith("/posts/")
+        ) {
+          return;
+        }
+
+        // 只有首页运行随机图
         const bannerImgs = [
           "/img/index-banner-1.png",
           "/img/index-banner-2.png",
@@ -1270,37 +1306,37 @@ inject:
           "/img/index-banner-4.png"
         ];
         const randomBanner = bannerImgs[Math.floor(Math.random() * bannerImgs.length)];
-        const bannerEl = document.querySelector("#page-header .full-img") || document.querySelector("#page-header");
+        const bannerEl = document.querySelector("#page-header");
         if (bannerEl) {
           bannerEl.style.backgroundImage = `url(${randomBanner})`;
           bannerEl.style.backgroundSize = "cover";
           bannerEl.style.backgroundPosition = "center";
         }
       });
-      // 2. 底部 Footer 随机背景（高度380px 修复版）
-      // 底部随机背景 + 高度380px + 文字不跑偏
-      document.addEventListener("DOMContentLoaded", function() {
-        const footerImgs = [
-          "/img/footer-bg-1.png",
-          "/img/footer-bg-2.png",
-          "/img/footer-bg-3.png",
-          "/img/footer-bg-4.png"
-        ];
-        const randomFooter = footerImgs[Math.floor(Math.random() * footerImgs.length)];
-        const footerEl = document.getElementById("footer");
+    </script>
+#      // 2. 底部随机背景 + 可以用
+#      document.addEventListener("DOMContentLoaded", function() {
+#        const footerImgs = [
+#          "/img/footer-bg-1.png",
+#          "/img/footer-bg-2.png",
+#          "/img/footer-bg-3.png",
+#          "/img/footer-bg-4.png"
+#        ];
+#        const randomFooter = footerImgs[Math.floor(Math.random() * footerImgs.length)];
+#        const footerEl = document.getElementById("footer");
+#
+#        if (footerEl) {
+#          footerEl.style.backgroundImage = `url(${randomFooter})`;
+#          footerEl.style.backgroundSize = "cover";
+#          footerEl.style.backgroundPosition = "center";
+#          footerEl.style.backgroundRepeat = "no-repeat";
+#          
+#          // 只保留背景，不修改任何高度、内边距
+#          // 完全恢复原生布局！
+#        }
+#      });
 
-        if (footerEl) {
-          footerEl.style.backgroundImage = `url(${randomFooter})`;
-          footerEl.style.backgroundSize = "cover";
-          footerEl.style.backgroundPosition = "center";
-          footerEl.style.backgroundRepeat = "no-repeat";
-          
-          // 只保留背景，不修改任何高度、内边距
-          // 完全恢复原生布局！
-        }
-      });
-      </script>
- 
+
 
 
 # CDN Settings
@@ -1351,7 +1387,8 @@ CDN:
     # docsearch_css:
     # docsearch_js:
     # egjs_infinitegrid:
-    # fancybox:
+     fancybox: true  
+     gallery: true
     # fancybox_css:
     # fireworks:
     # fontawesome:

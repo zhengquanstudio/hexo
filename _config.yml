@@ -65,11 +65,20 @@ index_generator:
   order_by: -date
 
 # Category & Tag
+
+category:
+  enable: true       # 开启分类页（默认 true）
+  layout: category   # 分类页布局（主题内置，无需修改）
+  # 以下为可选的美化配置（如封面、描述等）
+  cover: /images/cover/docs-changelog-cover.png
+  description: 这里是分类页的描述～
+
+
 default_category: uncategorized
 category_map:
     智能家居: smart
     技术笔记: tech
-    资源分享: resources
+    资源分享: share
     生活随拍: moments
     日常随笔: essays
 tag_map:
@@ -122,3 +131,5 @@ front_matter:
     enable: true
     start: 1
     step: 1
+
+
