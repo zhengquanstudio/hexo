@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 琅琊散记BLOG
+title: 琅琊散记のBLOG
 subtitle: 技术分享 & 记录生活
 description: 一个不会写代码会画画的运营，分享日常生活，爱养猫，爱钓鱼，爱养花，爱分享。
 keywords: Hexo,前端开发,编程,技术博客,琅琊,博客,blog,运营,分享,钓鱼
@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://langya.org.cn
-permalink: /:category/:abbrlink.html
+permalink: :category/:title.html
 permalink_defaults:
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks

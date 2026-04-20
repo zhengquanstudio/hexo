@@ -18,7 +18,7 @@ nav:
   fixed: false
 
 menu:
-  Home: / || fas fa-home
+  主页: / || fas fa-home
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
@@ -53,7 +53,7 @@ menu:
 # 开启说说功能
 talk:
   enable: true
-  # 说说页面路径，你可以自定义为 /weiyu/
+  # 说说页面路径
   path: /talk/
   # 每页显示多少条
   pageSize: 10
@@ -164,15 +164,15 @@ footer:
         - title: 目录
           item:
             - title: 🏠智能家居 
-              url: /smart/
+              url: /categories/smart/
             - title: 💻技术笔记 
-              url: /tech/
+              url: /categories/tech/
             - title: 🔍资源分享 
-              url: /share/
+              url: /categories/share/
             - title: 📷生活随拍 
-              url: /moments/
+              url: /categories/moments/
             - title: 🌅日常随笔 
-              url:  /essays/
+              url:  /categories/essays/
             - title: 📖全部文章 
               url: /archives/
 
@@ -453,7 +453,7 @@ aside:
     sort: date
     sort_order: '' # '' or 'reverse'
   card_newest_comments:
-    enable: false
+    enable: true
     sort_order:
     limit: 6
     # Unit: mins, save data to localStorage
@@ -527,7 +527,7 @@ translate:
   msgToTraditionalChinese: '繁'
   # The text of the button when the language is Traditional Chinese
   msgToSimplifiedChinese: '簡'
-
+  buttonPos: top
 # Read Mode
 readmode: true
 
@@ -704,7 +704,7 @@ comments:
   # Leave it empty if you don't need comments
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
   # Format of two comments system : Disqus,Waline
-  use: commentjs
+  use: 
 
   # Display the comment name next to the button
   text: true
@@ -841,11 +841,24 @@ remark42:
 # Artalk
 # https://artalk.js.org/guide/frontend/config.html
 artalk:
-  server:
-  site:
+
   # Use Artalk visitor count as the page view count
   visitor: false
   option:
+    pageView: true  
+  site: "琅琊散记のBLOG"    # 你的网站名字
+  server: "https://artalk.vercel.app" # 官方稳定后端
+  placeholder: "快来分享你的想法吧～"
+  darkMode: auto
+  noComment: "快来抢沙发！"
+  sendBtn: "提交评论"
+  replyBtn: "回复"
+  cancelBtn: "取消"
+  maxHeight: 1000
+  useBackendConf: true
+
+
+
 
 # --------------------------------------
 # Chat Services
@@ -971,8 +984,8 @@ site_verification:
 # The user interface setting of category and tag page
 # Choose: index - same as Homepage UI / default - same as archives UI
 # leave it empty or index
-category_ui:
-tag_ui:
+category_ui: index
+tag_ui: index
 
 # --------------------------------------
 # Archives
@@ -983,7 +996,7 @@ tag_ui:
 # 1 =  list   列表式
 # 2 =  card   卡片式
 # 3 =  timeline 时间线样式
-archive_ui: 3
+archive_ui: 2
 
 # Rounded corners for UI elements
 rounded_corners_ui: true
@@ -1283,37 +1296,43 @@ inject:
         }
       </style>
     # - <link rel="stylesheet" href="/xxx.css">
+
   bottom:
-  - |
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const path = document.body.dataset.path || "";
+    # Artalk 评论样式（单行，无缩进问题）
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/artalk@latest/dist/Artalk.css">
+    # Artalk 评论脚本（单行，无缩进问题）
+    - <script src="https://cdn.jsdelivr.net/npm/artalk@latest/dist/Artalk.umd.js"></script>
+    # 首页随机背景图脚本（多行格式，缩进严格匹配 YAML 规范）
+    - |
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const path = document.body.dataset.path || "";
 
-        // 如果是 分类页 / 标签页 / 文章页 → 不运行随机背景
-        if (
-          path.startsWith("/categories/") || 
-          path.startsWith("/tags/") || 
-          path.startsWith("/posts/")
-        ) {
-          return;
-        }
+          // 如果是 分类页 / 标签页 / 文章页 → 不运行随机背景
+          if (
+            path.startsWith("/categories/") || 
+            path.startsWith("/tags/") || 
+            path.startsWith("/posts/")
+          ) {
+            return;
+          }
 
-        // 只有首页运行随机图
-        const bannerImgs = [
-          "/img/index-banner-1.png",
-          "/img/index-banner-2.png",
-          "/img/index-banner-3.png",
-          "/img/index-banner-4.png"
-        ];
-        const randomBanner = bannerImgs[Math.floor(Math.random() * bannerImgs.length)];
-        const bannerEl = document.querySelector("#page-header");
-        if (bannerEl) {
-          bannerEl.style.backgroundImage = `url(${randomBanner})`;
-          bannerEl.style.backgroundSize = "cover";
-          bannerEl.style.backgroundPosition = "center";
-        }
-      });
-    </script>
+          // 只有首页运行随机图
+          const bannerImgs = [
+            "/img/index-banner-1.png",
+            "/img/index-banner-2.png",
+            "/img/index-banner-3.png",
+            "/img/index-banner-4.png"
+          ];
+          const randomBanner = bannerImgs[Math.floor(Math.random() * bannerImgs.length)];
+          const bannerEl = document.querySelector("#page-header");
+          if (bannerEl) {
+            bannerEl.style.backgroundImage = `url(${randomBanner})`;
+            bannerEl.style.backgroundSize = "cover";
+            bannerEl.style.backgroundPosition = "center";
+          }
+        });
+      </script>
 #      // 2. 底部随机背景 + 可以用
 #      document.addEventListener("DOMContentLoaded", function() {
 #        const footerImgs = [
@@ -1421,3 +1440,5 @@ CDN:
     # valine:
     # waline_css:
     # waline_js:
+
+
