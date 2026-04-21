@@ -82,7 +82,7 @@ hexo.extend.helper.register('cloudTags', function (options = {}) {
   }).join('')
 })
 
-hexo.extend.helper.register('urlNoIndex', function (url = null, trailingIndex = false, trailingHtml = false) {
+hexo.extend.helper.register('urlNoIndex', function (url = null, trailingIndex = false, trailingHtml = true) {
   return prettyUrls(url || this.url, { trailing_index: trailingIndex, trailing_html: trailingHtml })
 })
 
