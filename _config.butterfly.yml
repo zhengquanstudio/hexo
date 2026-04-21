@@ -837,10 +837,10 @@ twikoo:
 # https://giscus.app/
 
 giscus:
-  repo: zhengquanstudio/hexo-blog-comments
-  repo_id: R_kgDOSIWoYg
-  category: General
-  category_id: DIC_kwDOSIWoYs4C7VU5
+  repo: zhengquanstudio/hexo-blog-giscus-comments
+  repo_id: R_kgDOSIzBHg
+  category: Announcements
+  category_id: DIC_kwDOSIzBHs4C7XRB
   mapping: pathname
   strict: 0
   reactions_enabled: 1
@@ -848,7 +848,7 @@ giscus:
   input_position: bottom
   theme: preferred_color_scheme
   lang: zh-CN
-  lazy_loading: true
+  lazy_loading: lazy
 
 
 # Remark42

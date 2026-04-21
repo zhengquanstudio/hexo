@@ -1,5 +1,5 @@
 ---
-title: 说说
+title: 闲言碎语
 date: 2026-04-21
 type: 'shuoshuo'
 comments: true

@@ -10,7 +10,7 @@ comments: true
     <div class="flink-item">
       <img src="/img/avatar.png" class="flink-avatar">
       <div class="flink-info">
-        <a href="https://langya.org.cn" target="_blank">琅琊驿站</a>
+        <a href="https://www.langya.org.cn" target="_blank">琅琊散记のBLOG</a>
         <p>一个爱折腾技术的博主</p>
       </div>
     </div>
@@ -51,8 +51,8 @@ comments: true
     <p><strong>🌟 本站信息（可直接复制）：</strong></p>
     <ul>
       <li>网站名称：琅琊驿站</li>
-      <li>网站地址：https://langya.org.cn</li>
-      <li>网站 Logo：https://langya.org.cn/img/avatar.png</li>
+      <li>网站地址：https://www.langya.org.cn</li>
+      <li>网站 Logo：https://www.langya.org.cn/img/avatar.png</li>
       <li>网站描述：一个爱折腾技术的博主</li>
     </ul>
   </div>
