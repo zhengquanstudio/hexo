@@ -36,12 +36,15 @@ menu:
 # --------------------------------------------
   图库: /gallery/ || fas fa-images
   标签: /tags/ || fas fa-tags
-  说说: /talk/ || fa-solid fa-comment-dots
+  留言板: /messageboard/ || fas fa-paper-plane
+  说说: /shuoshuo/ || fa-solid fa-comment-dots
   归档: /archives/ || fas fa-archive    
   友链: /links/ || fas fa-link
   关于: /about/ || fas fa-user
 
-
+author:
+  name: 琅琊
+  avatar: /img/avatar.png # 你的头像地址
 
 
 # --------------------------------------
@@ -51,25 +54,24 @@ menu:
 # --------------------------------------
 
 # 开启说说功能
-talk:
+
+shuoshuo:
   enable: true
   # 说说页面路径
-  path: /talk/
+  path: /shuoshuo/
   # 每页显示多少条
   pageSize: 10
   # 是否开启评论
   comments: true
   # 置顶说说
   top: false
+  avatar: /img/avatar.png
 
 # 说说页面随机顶图
 
-  top_img: |
-    - /img/shuoshuo-bg-1.png
-    - /img/shuoshuo-bg-2.png
-    - /img/shuoshuo-bg-3.png
-    - /img/shuoshuo-bg-4.png	
-    - /img/shuoshuou-bg-5.png
+  top_img:
+#      /img/shuoshuo-bg-1.png
+
     # 继续加你的图片
 
 # --------------------------------------
@@ -185,7 +187,7 @@ footer:
             - title: 💬留言板
               url: /messageboard/
             - title: 🗣️说说
-              url: /talk/
+              url: /shuoshuo/
             - title: 🏷️标签
               url: /tags/
             - title: 🤙关于
@@ -427,6 +429,19 @@ aside:
     archive: true
     tag: true
     category: true
+
+  # 侧边栏卡片显示顺序（必须写）
+  content:
+    card_author
+    card_announcement
+    card_newest_comments
+    card_recent_post
+    card_categories
+    card_tags
+    card_archives
+    card_webinfo
+
+
   card_author:
     enable: true
     description: 一个爱折腾不会写代码的运营！
@@ -445,6 +460,9 @@ aside:
            style="max-width: 150px; display: block; margin: 10px auto; border-radius: 8px;">
       <p style="font-size: 12px; color: #999;">扫码备注「博客」即可</p>
 
+
+
+
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -452,13 +470,21 @@ aside:
     # Sort: date / updated
     sort: date
     sort_order: '' # '' or 'reverse'
+
+# --------------------------
+# 留言板侧边栏卡片
+# --------------------------
+
+
   card_newest_comments:
-    enable: true
+    enable: true  # 开启最新评论侧边栏卡片
     sort_order:
-    limit: 6
+    limit: 6      # 显示6条最新评论
+    storage: 10   # 缓存10分钟
+    avatar: true  # 显示头像
+
     # Unit: mins, save data to localStorage
-    storage: 10
-    avatar: true
+
   card_categories:
     enable: true
     # If set 0 will show all
@@ -704,13 +730,13 @@ comments:
   # Leave it empty if you don't need comments
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
   # Format of two comments system : Disqus,Waline
-  use: 
+  use: giscus
 
   # Display the comment name next to the button
   text: true
   # Lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
-  lazyload: false
+  lazyload: true
   # Display comment count in post's top_img
   count: true
   # Display comment count in Home Page
@@ -809,26 +835,20 @@ twikoo:
 
 # Giscus
 # https://giscus.app/
+
 giscus:
-  repo:
-  repo_id:
-  category_id:
-  light_theme: light
-  dark_theme: dark
-  js:
-  option:
-
-
-#giscus:
-#  repo: zhengquanstudio/hexo-blog-comments
-#  repo_id: R_kgDOSGlvqA
-#  category: Announcements
-#  category_id: DIC_kwDOSGlvqM4C7L8O
-#  mapping: pathname
-#  reactions_enabled: 1
-#  emit_metadata: 0
-#  theme: light
-#  lang: zh-CN
+  repo: zhengquanstudio/hexo-blog-comments
+  repo_id: R_kgDOSIWoYg
+  category: General
+  category_id: DIC_kwDOSIWoYs4C7VU5
+  mapping: pathname
+  strict: 0
+  reactions_enabled: 1
+  emit_metadata: 0
+  input_position: bottom
+  theme: preferred_color_scheme
+  lang: zh-CN
+  lazy_loading: true
 
 
 # Remark42
@@ -1011,7 +1031,7 @@ mask:
 
 # Loading Animation
 preloader:
-  enable: false
+  enable: true
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
@@ -1119,6 +1139,8 @@ clickShowText:
   random: false
   mobile: false
 
+
+
 # --------------------------------------
 # Lightbox Settings
 # --------------------------------------
@@ -1129,6 +1151,8 @@ clickShowText:
 # Leave it empty if you don't need lightbox
 lightbox: true
 lightbox_type: fancybox
+# 图片画廊（可选，增强效果）
+gallery: true
 # --------------------------------------
 # Tag Plugins settings
 # --------------------------------------
@@ -1234,7 +1258,7 @@ lazyload:
   native: false
   # Specify the field to use lazyload (site or post)
   field: site
-  placeholder:
+  placeholder: /img/loading.gif
   blur: true
 
 # PWA
@@ -1276,7 +1300,7 @@ css_prefix: true
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
   head:
-    - |
+    - | 
       <style>
         /* 全局强制：分类页覆盖顶部背景 */
         body[data-path="/categories/tech/"] #page-header {
@@ -1354,7 +1378,7 @@ inject:
 #          // 完全恢复原生布局！
 #        }
 #      });
-
+ 
 
 
 
@@ -1406,8 +1430,8 @@ CDN:
     # docsearch_css:
     # docsearch_js:
     # egjs_infinitegrid:
-     fancybox: true  
-     gallery: true
+    # fancybox: true  
+    # gallery: true
     # fancybox_css:
     # fireworks:
     # fontawesome:
@@ -1422,7 +1446,7 @@ CDN:
     # main:
     # main_css:
     # mathjax:
-    # medium_zoom:
+    # medium_zoom: 
     # mermaid:
     # meting_js:
     # prismjs_autoloader:

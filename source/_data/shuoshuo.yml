@@ -1,0 +1,33 @@
+- author: 琅琊
+  avatar:  /img/avatar.png
+  date: 2026-04-21 16:00:00
+  key: shuoshuo-1  # 唯一标识，每条说说都不一样
+  content: |
+    博客说说功能完美完成🎉
+    支持文字、图片、标签、评论！
+    ![壁纸](/img/gallery/wallpaper/3.png)
+  tags:
+    - 博客
+    - 日常
+
+- author: 琅琊
+  avatar:  /img/avatar.png
+  date: 2026-04-20 12:00:00
+  key: shuoshuo-2
+  content: |
+    博客说说功能完美完成🎉
+    支持文字、图片、标签、评论！
+    ![壁纸](/img/gallery/wallpaper/2.png)
+  tags:
+    - 分享
+
+- author: 琅琊
+  avatar: /img/avatar.png
+  date: 2026-04-20 11:00:00
+  key: shuoshuo-3
+  content: |
+    博客说说功能完美完成🎉
+    支持文字、图片、标签、评论！
+    ![壁纸](/img/gallery/wallpaper/1.png)
+  tags:
+    - 分享
