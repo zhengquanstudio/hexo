@@ -44,7 +44,7 @@ menu:
 
 author:
   name: 琅琊
-  avatar: /img/avatar.png # 你的头像地址
+  avatar: https://img.langya.org.cn/images/img/avatar.png # 你的头像地址
 
 
 # --------------------------------------
@@ -65,7 +65,7 @@ shuoshuo:
   comments: true
   # 置顶说说
   top: false
-  avatar: /img/avatar.png
+  avatar: https://img.langya.org.cn/images/img/avatar.png
 
 # 说说页面随机顶图
 
@@ -104,10 +104,10 @@ social:
 # Image Settings
 # --------------------------------------
 
-favicon: /img/favicon.png
+favicon: https://img.langya.org.cn/images/img/favicon.png
 
 avatar:
-  img: /img/avatar.png
+  img: https://img.langya.org.cn/images/img/avatar.png
   effect: true
 
 # Disable all banner images
@@ -143,7 +143,7 @@ category_per_img:
 
 #页脚背景图
 # The background image of footer
-footer_img:  /img/footer-bg-1.png  # 把图片放到 source/img/ 下
+footer_img:  https://img.langya.org.cn/images/img/footer-bg.png  # 把图片放到 source/img/ 下
  
  
 # Website Background
@@ -206,12 +206,12 @@ footer:
           item:
             - title: 支付宝
               url:
-              html: "<img src='/img/alipay.jpg' alt='Alipay' width='100px' height='100px'>"
+              html: "<img src='https://img.langya.org.cn/images/img/alipay.jpg' alt='Alipay' width='100px' height='100px'>"
         - title: 
           item:
             - title: 微信
               url:
-              html: "<img src='/img/wechat.png' alt='WeChat' width='100px' height='100px'>"
+              html: "<img src='https://img.langya.org.cn/images/img/wechat.png' alt='WeChat' width='100px' height='100px'>"
 
 
 
@@ -237,19 +237,19 @@ cover:
   position: left  # 可选 left / right / both / none
   # 默认封面图（文章没有设置cover时，自动显示这张）
   default_cover:
-    - /img/cover/docs-changelog-cover.png  # 你的默认图路径
+    - https://img.langya.org.cn/images/cover/docs-changelog-cover.png  # 你的默认图路径
    # - /img/default-cover2.jpg  # 可以放多张，主题会随机显示
 
 # Replace Broken Images
 error_img:
-  flink: /img/friend_404.gif
-  post_page: /img/404.jpg
+  flink: https://img.langya.org.cn/images/img/friend_404.gif
+  post_page: https://img.langya.org.cn/images/img/404.jpg
 
 # A simple 404 page
 error_404:
   enable: false
   subtitle: 'Page Not Found'
-  background: /img/error-page.png
+  background: https://img.langya.org.cn/images/img/error-page.png
 
 post_meta:
   # Home Page
@@ -371,10 +371,10 @@ reward:
   enable: true
   text: 请我喝杯奶茶吧(*￣︶￣)
   QR_code:
-     - img: /img/wechat.png
+     - img: https://img.langya.org.cn/images/img/wechat.png
     #   link:
        text: wechat
-     - img: /img/alipay.jpg
+     - img: https://img.langya.org.cn/images/img/alipay.jpg
     #   link:
        text: alipay
 
@@ -455,7 +455,7 @@ aside:
     content: |
      <p>欢迎来到我的博客~</p>
       <p>有问题或想交流，欢迎加我微信👇</p>
-      <img src="/img/wechat-qr.png" 
+      <img src="https://img.langya.org.cn/images/img/wechat-qr.png" 
            alt="微信二维码" 
            style="max-width: 150px; display: block; margin: 10px auto; border-radius: 8px;">
       <p style="font-size: 12px; color: #999;">扫码备注「博客」即可</p>
@@ -1258,7 +1258,7 @@ lazyload:
   native: false
   # Specify the field to use lazyload (site or post)
   field: site
-  placeholder: /img/loading.gif
+  placeholder: https://img.langya.org.cn/images/img/loading.gif
   blur: true
 
 # PWA
@@ -1304,28 +1304,28 @@ inject:
       <style>
         /* 全局强制：分类页覆盖顶部背景 */
         body[data-path="/categories/tech/"] #page-header {
-          background-image: url("/img/cover/category-cover-1600x900.jpg") !important;
+          background-image: url("https://img.langya.org.cn/images/img/cover/category-cover.png") !important;
         }
         body[data-path="/categories/smart/"] #page-header {
-          background-image: url("/img/cover/smart-cover.jpg") !important;
+          background-image: url("https://img.langya.org.cn/images/img/cover/smart-cover.png") !important;
         }
         body[data-path="/categories/share/"] #page-header {
-          background-image: url("/img/cover/share-cover.jpg") !important;
+          background-image: url("https://img.langya.org.cn/images/img/cover/share-cover.png") !important;
         }
         body[data-path="/categories/moments/"] #page-header {
-          background-image: url("/img/cover/moments-cover.jpg") !important;
+          background-image: url("https://img.langya.org.cn/images/img/cover/moments-cover.png") !important;
         }
         body[data-path="/categories/essays/"] #page-header {
-          background-image: url("/img/cover/essays-cover.jpg") !important;
+          background-image: url("https://img.langya.org.cn/images/img/cover/essays-cover.png") !important;
         }
       </style>
     # - <link rel="stylesheet" href="/xxx.css">
 
   bottom:
     # Artalk 评论样式（单行，无缩进问题）
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/artalk@latest/dist/Artalk.css">
+    #- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/artalk@latest/dist/Artalk.css">
     # Artalk 评论脚本（单行，无缩进问题）
-    - <script src="https://cdn.jsdelivr.net/npm/artalk@latest/dist/Artalk.umd.js"></script>
+    #- <script src="https://cdn.jsdelivr.net/npm/artalk@latest/dist/Artalk.umd.js"></script>
     # 首页随机背景图脚本（多行格式，缩进严格匹配 YAML 规范）
     - |
       <script>
@@ -1343,10 +1343,10 @@ inject:
 
           // 只有首页运行随机图
           const bannerImgs = [
-            "/img/index-banner-1.png",
-            "/img/index-banner-2.png",
-            "/img/index-banner-3.png",
-            "/img/index-banner-4.png"
+            "https://img.langya.org.cn/images/img/index-banner-1.png",
+            "https://img.langya.org.cn/images/img/index-banner-2.png",
+            "https://img.langya.org.cn/images/img/index-banner-3.png",
+            "https://img.langya.org.cn/images/img/index-banner-4.png"
           ];
           const randomBanner = bannerImgs[Math.floor(Math.random() * bannerImgs.length)];
           const bannerEl = document.querySelector("#page-header");
@@ -1405,8 +1405,8 @@ CDN:
   custom_format:
 
   # 图片 CDN 自动加速（你新增这 2 行）
-  host: https://cdn.jsdelivr.net/gh/zhengquanstudio/hexo@main
-  enable: true
+  host:
+  enable: false
 
   option:
     # abcjs_basic_js:

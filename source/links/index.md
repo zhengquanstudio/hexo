@@ -8,7 +8,7 @@ comments: true
 <div class="flink-container">
   <div class="flink-list">
     <div class="flink-item">
-      <img src="/img/avatar.png" class="flink-avatar">
+      <img src="https://img.langya.org.cn/images/img/avatar.png" class="flink-avatar">
       <div class="flink-info">
         <a href="https://www.langya.org.cn" target="_blank">琅琊散记のBLOG</a>
         <p>一个爱折腾技术的博主</p>
@@ -22,7 +22,7 @@ comments: true
       </div>
     </div>
     <div class="flink-item">
-      <img src="/img/avatar.png" class="flink-avatar">
+      <img src="https://img.langya.org.cn/images/img/avatar.png" class="flink-avatar">
       <div class="flink-info">
         <a href="https://linyibbs.com.cn" target="_blank">临沂论坛</a>
         <p>临沂人的本地生活门户网站</p>

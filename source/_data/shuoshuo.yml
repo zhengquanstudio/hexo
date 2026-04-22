@@ -1,33 +1,69 @@
 - author: 琅琊
   avatar:  /img/avatar.png
-  date: 2026-04-21 16:00:00
-  key: shuoshuo-1  # 唯一标识，每条说说都不一样
+  date: 2026-04-22 14:00:00
+  key: shuoshuo-6  # 唯一标识，每条说说都不一样
   content: |
     博客说说功能完美完成🎉
     支持文字、图片、标签、评论！
-    ![壁纸](/img/gallery/wallpaper/3.png)
+    ![壁纸](https://img.langya.org.cn/images/2026/04/1776840994)
   tags:
     - 博客
     - 日常
 
 - author: 琅琊
   avatar:  /img/avatar.png
-  date: 2026-04-20 12:00:00
-  key: shuoshuo-2
+  date: 2026-04-22 13:00:00
+  key: shuoshuo-5
   content: |
     博客说说功能完美完成🎉
     支持文字、图片、标签、评论！
-    ![壁纸](/img/gallery/wallpaper/2.png)
+    ![壁纸](https://img.langya.org.cn/images/2026/04/1776840992)
   tags:
     - 分享
 
 - author: 琅琊
   avatar: /img/avatar.png
-  date: 2026-04-20 11:00:00
+  date: 2026-04-22 12:00:00
+  key: shuoshuo-4
+  content: |
+    博客说说功能完美完成🎉
+    支持文字、图片、标签、评论！
+    ![壁纸](https://img.langya.org.cn/images/2026/04/1776840985)
+  tags:
+    - 分享
+
+- author: 琅琊
+  avatar: /img/avatar.png
+  date: 2026-04-19 11:00:00
   key: shuoshuo-3
   content: |
     博客说说功能完美完成🎉
     支持文字、图片、标签、评论！
-    ![壁纸](/img/gallery/wallpaper/1.png)
+    ![壁纸](https://img.langya.org.cn/images/2026/04/1776840981)
   tags:
     - 分享
+
+
+- author: 琅琊
+  avatar: /img/avatar.png
+  date: 2026-04-18 12:00:00
+  key: shuoshuo-2
+  content: |
+    博客说说功能完美完成🎉
+    支持文字、图片、标签、评论！
+    ![壁纸](https://img.langya.org.cn/images/2026/04/1776840709)
+  tags:
+    - 分享
+
+
+- author: 琅琊
+  avatar: /img/avatar.png
+  date: 2026-04-18 11:00:00
+  key: shuoshuo-1
+  content: |
+    博客说说功能完美完成🎉
+    支持文字、图片、标签、评论！
+    ![壁纸](https://img.langya.org.cn/images/2026/04/1776841651)
+  tags:
+    - 分享
+

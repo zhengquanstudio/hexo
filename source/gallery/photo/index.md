@@ -24,20 +24,20 @@ date: 2026-04-20
 </style>
 
 <div class="photo-grid">
-  <a href="/img/gallery/photo/1.png" data-fancybox="gallery" data-caption="图1">
-    <img src="/img/gallery/photo/1.png">
+  <a href="https://img.langya.org.cn/images/2026/04/1776845493" data-fancybox="gallery" data-caption="壁纸">
+    <img src="https://img.langya.org.cn/images/2026/04/1776845493">
   </a>
-  <a href="/img/gallery/photo/2.png" data-fancybox="gallery" data-caption="图2">
-    <img src="/img/gallery/photo/2.png">
+  <a href="https://img.langya.org.cn/images/2026/04/1776845495" data-fancybox="gallery" data-caption="壁纸">
+    <img src="https://img.langya.org.cn/images/2026/04/1776845495">
   </a>
-  <a href="/img/gallery/photo/3.png" data-fancybox="gallery" data-caption="图3">
-    <img src="/img/gallery/photo/3.png">
+  <a href="https://img.langya.org.cn/images/2026/04/1776845496" data-fancybox="gallery" data-caption="壁纸">
+    <img src="https://img.langya.org.cn/images/2026/04/1776845496">
   </a>
-  <a href="/img/gallery/photo/4.png" data-fancybox="gallery" data-caption="图4">
-    <img src="/img/gallery/photo/4.png">
+  <a href="https://img.langya.org.cn/images/2026/04/1776845500" data-fancybox="gallery" data-caption="壁纸">
+    <img src="https://img.langya.org.cn/images/2026/04/1776845500">
   </a>
-  <a href="/img/gallery/photo/5.png" data-fancybox="gallery" data-caption="图5">
-    <img src="/img/gallery/photo/5.png">
+  <a href="https://img.langya.org.cn/images/2026/04/1776845501" data-fancybox="gallery" data-caption="壁纸">
+    <img src="https://img.langya.org.cn/images/2026/04/1776845501">
   </a>
 
 </div>
