@@ -1,5 +1,5 @@
 - author: 琅琊
-  avatar:  /img/avatar.png
+  avatar:  https://img.langya.org.cn/images/img/avatar.png
   date: 2026-04-22 14:00:00
   key: shuoshuo-6  # 唯一标识，每条说说都不一样
   content: |
@@ -11,7 +11,7 @@
     - 日常
 
 - author: 琅琊
-  avatar:  /img/avatar.png
+  avatar:  https://img.langya.org.cn/images/img/avatar.png
   date: 2026-04-22 13:00:00
   key: shuoshuo-5
   content: |
@@ -22,7 +22,7 @@
     - 分享
 
 - author: 琅琊
-  avatar: /img/avatar.png
+  avatar: https://img.langya.org.cn/images/img/avatar.png
   date: 2026-04-22 12:00:00
   key: shuoshuo-4
   content: |
@@ -33,7 +33,7 @@
     - 分享
 
 - author: 琅琊
-  avatar: /img/avatar.png
+  avatar: https://img.langya.org.cn/images/img/avatar.png
   date: 2026-04-19 11:00:00
   key: shuoshuo-3
   content: |
@@ -45,7 +45,7 @@
 
 
 - author: 琅琊
-  avatar: /img/avatar.png
+  avatar: https://img.langya.org.cn/images/img/avatar.png
   date: 2026-04-18 12:00:00
   key: shuoshuo-2
   content: |
@@ -57,7 +57,7 @@
 
 
 - author: 琅琊
-  avatar: /img/avatar.png
+  avatar: https://img.langya.org.cn/images/img/avatar.png
   date: 2026-04-18 11:00:00
   key: shuoshuo-1
   content: |
