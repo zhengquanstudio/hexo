@@ -454,11 +454,11 @@ aside:
     enable: true
     content: |
      <p>欢迎来到我的博客~</p>
-      <p>有问题或想交流，欢迎加我微信👇</p>
-      <img src="https://img.langya.org.cn/images/img/wechat-qr.png" 
+      <p>欢迎打赏👇</p>
+      <img src="https://img.langya.org.cn/images/img/wechat.png" 
            alt="微信二维码" 
            style="max-width: 150px; display: block; margin: 10px auto; border-radius: 8px;">
-      <p style="font-size: 12px; color: #999;">扫码备注「博客」即可</p>
+      <p style="font-size: 12px; color: #999;">扫码即可</p>
 
 
 
