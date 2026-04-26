@@ -973,9 +973,10 @@ ad:
 site_verification:
   # - name: google-site-verification
   #   content: xxxxxx
-  # - name: baidu-site-verification
-  #   content: xxxxxxx
-
+   - name: baidu-site-verification
+     content: codeva-kB0U9IIRQy
+   - name: msvalidate.01    #bing收录
+     content: BA661B5AEBA2609A28F7DBA980AEFD0A
 # --------------------------------------
 # Beautify / Effect
 # --------------------------------------
