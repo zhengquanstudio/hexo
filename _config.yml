@@ -132,4 +132,16 @@ front_matter:
     start: 1
     step: 1
 
+# 站点地图
+sitemap:
+  path: sitemap.xml
+  rel: false
 
+# RSS订阅（可选）
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
