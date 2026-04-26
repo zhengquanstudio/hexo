@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>琅琊散记のBLOG</title>
+  
+  <subtitle>技术分享 &amp; 记录生活</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.langya.org.cn/"/>
+  <updated>2026-04-25T06:00:00.000Z</updated>
+  <id>https://www.langya.org.cn/</id>
+  
+  <author>
+    <name>琅琊</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>马上又到五一劳动节啦！</title>
+    <link href="https://www.langya.org.cn/essays/202651.html"/>
+    <id>https://www.langya.org.cn/essays/202651.html</id>
+    <published>2026-04-25T06:00:00.000Z</published>
+    <updated>2026-04-25T06:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h4 id=""><a href="#" class="headerlink" title=""></a></h4><h2 id="又到五一劳动节啦，又要放假啦！"><a href="#又到五一劳动节啦，又要放假啦！" class="headerlink" title="又到五一劳动节啦，又要放假啦！"></a>又到五一劳动节啦，又要放假啦！</h2><p>2026年五一劳动节放假时间：</p><p>5月1日 (周五)至5日 (周二)**放假调休，共5天。 </p><p>5月9日 (周六)上班。 </p><p>高速免费时间：5月1日12点-5月5日24点。 </p><p><img src="https://img.langya.org.cn/images/2026/04/1777097737"></p><p>小伙伴们都去哪里玩了？</p><p>(*￣︶￣)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;h4 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;h2 id=&quot;又到五一劳动节啦，又要放假啦！&quot;&gt;&lt;a href=&quot;#又到五一劳动节啦，又要放假啦！&quot; class=&quot;headerlink&quot; title
+      
+    
+    </summary>
+    
+    
+      <category term="essays" scheme="https://www.langya.org.cn/categories/essays/"/>
+    
+    
+      <category term="放假" scheme="https://www.langya.org.cn/tags/%E6%94%BE%E5%81%87/"/>
+    
+      <category term="日常" scheme="https://www.langya.org.cn/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小白教程 使用 Hexo+GitHub 搭建个人免费博客</title>
+    <link href="https://www.langya.org.cn/essays/8.html"/>
+    <id>https://www.langya.org.cn/essays/8.html</id>
+    <published>2026-04-20T10:00:00.000Z</published>
+    <updated>2026-04-22T08:07:55.827Z</updated>
+    
+    <content type="html"><![CDATA[<p>近些年来很多用户都喜欢使用 GitHub Pages 来搭建 Hexo 静态博客网站，其最吸引人的莫过于完全免费使用，并且非常稳定。</p><p>虽然搭建时比较麻烦，有点折腾，但是配置完成后，基本不需要操心维护的事，甚至放了几年都忘记了，打开来看文章依然还在。<br>本文就详细介绍下如何使用 Hexo + GitHub 搭建免费个人博客网站的教程。</p><p>为了照顾小白用户（第一次使用 GitHub 和 Hexo），尽可能详细，包括常见的坑和问题都有提示说明。下面目录中第 3~5 步为最重要的步骤，其他内容如果已经会的可以选择性跳过。</p><p>看起来有点繁杂，捋顺了倒也简单，认真跟教程走，完整操作一遍大概需要 30 分钟。</p><p>内容目录：</p><p>简介：GitHub Pages 和 Hexo &amp; 原理</p><p>准备：环境搭建 1.1. 注意事项 1.2. 环境搭建 连接 Github 创建 Github Pages 仓库 本地安装 Hexo 博客程序 4.1. 安装 Hexo 4.2. Hexo 初始化和本地预览 部署 Hexo 到 GitHub Pages 绑定域名（可选） 开始使用 7.1. 发布文章 7.2. 网站设置 7.3. 更换主题 7.4. 常用代码 常见问题 简介</p><h1 id="GitHub-Pages-是什么？"><a href="#GitHub-Pages-是什么？" class="headerlink" title="GitHub Pages 是什么？"></a>GitHub Pages 是什么？</h1><p>What is <a href="https://github.com/">GitHub</a> Pages? - GitHub Help GitHub Pages 是由 GitHub 官方提供的一种免费的静态站点托管服务，让我们可以在 GitHub 仓库里托管和发布自己的静态网站页面。</p><h1 id="Hexo-是什么？"><a href="#Hexo-是什么？" class="headerlink" title="Hexo 是什么？"></a>Hexo 是什么？</h1><p>官网：<a href="http://hexo.io/">hexo.io</a>Hexo 是一个快速、简洁且高效的静态博客框架，它基于 Node.js 运行，可以将我们撰写的 Markdown 文档解析渲染成静态的 HTML 网页。</p><h1 id="Hexo-GitHub-文章发布原理"><a href="#Hexo-GitHub-文章发布原理" class="headerlink" title="Hexo + GitHub 文章发布原理"></a>Hexo + GitHub 文章发布原理</h1><p>在本地撰写 Markdown 格式文章后，通过 Hexo 解析文档，渲染生成具有主题样式的 HTML 静态网页，再推送到 GitHub 上完成博文的发布。</p><h1 id="优点和不足"><a href="#优点和不足" class="headerlink" title="优点和不足"></a>优点和不足</h1><p>优点：完全免费；静态站点，轻量快速；可按需求自由定制改造；托管在 GitHub，安全省心；迁移方便……</p><p>不足：发文不便，依赖于本地环境；更适合个人博客使用；GitHub 在国内访问速度有点不快。</p><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>输入代码时，核对准确，最好切换成英文输入法； 将文中的 “用户名” 和 “邮箱” 替换为自己的 GitHub 账户名和绑定的邮箱； 统一使用 Git Bash 进行操作（支持 Win、Mac）； 小白请严格按步骤进行，不要跳！</p><h1 id="1-1环境搭建"><a href="#1-1环境搭建" class="headerlink" title="1.1环境搭建"></a>1.1环境搭建</h1><p>Hexo 基于 Node.js，搭建过程中还需要使用 npm（Node.js 已带） 和 git，因此先搭建本地操作环境，安装 Node.js 和 Git。</p><p>Node.js：<a href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a><br>Git：<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>下载 Node.js 和 Git 程序并安装，一路点 “下一步” 按默认配置完成安装。</p><p>安装完成后，Win+R 输入 cmd 并打开，依次输入 ​&#x3D;&#x3D;node -v&#x3D;&#x3D;​、&#x3D;&#x3D;npm -v&#x3D;&#x3D; 和&#x3D;&#x3D;​ git –version&#x3D;&#x3D; 并回车，出现程序版本号即可。</p><h1 id="1-2-注册GitHub"><a href="#1-2-注册GitHub" class="headerlink" title="1.2 注册GitHub"></a>1.2 注册GitHub</h1><p>连接 Github 使用邮箱注册 GitHub 账户，选择免费账户（Free），并完成邮件验证。</p><p>右键 -&gt; Git Bash Here，设置用户名和邮箱：</p><p>&#x3D;&#x3D;git config –global user.name “GitHub 用户名”&#x3D;&#x3D;&#x3D;&#x3D;git config –global user.email “GitHub 邮箱”&#x3D;&#x3D;创建 SSH 密匙：</p><p>输入​&#x3D;&#x3D;​ ssh-keygen -t rsa -C “GitHub 邮箱”&#x3D;&#x3D;​，然后一路回车。</p><p>添加密匙：</p><p>进入 [C:\Users\用户名.ssh] 目录（要勾选显示“隐藏的项目”），用记事本打开公钥 id_rsa.pub 文件并复制里面的内容。</p><p>登陆 GitHub ，进入 Settings 页面，选择左边栏的 SSH and GPG keys，点击 New SSH key。</p><p>Title 随便取个名字，粘贴复制的 id_rsa.pub 内容到 Key 中，点击 Add SSH key 完成添加。</p><p>验证连接：</p><p>打开 Git Bash，输入 &#x3D;&#x3D;ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;">git@github.com</a>&#x3D;&#x3D; 出现 “Are you sure……”，输入 yes 回车确认。</p><p>显示 “Hi xxx! You’ve successfully……” 即连接成功。</p><h1 id="1-3-创建GitHub-pages"><a href="#1-3-创建GitHub-pages" class="headerlink" title="1.3 创建GitHub pages"></a>1.3 创建GitHub pages</h1><p>创建 Github Pages 仓库 GitHub 主页右上角加号 -&gt; New repository：</p><p>Repository name 中输入 用户名.github.io 勾选 “Initialize this repository with a README” Description 选填 填好后点击 Create repository 创建。</p><p>创建后默认自动启用 HTTPS，博客地址为：https:&#x2F;&#x2F;用户名.github.io</p><p>#1.4 新建hexo本地程序<br>本地安装 Hexo 博客程序 新建一个文件夹用来存放 Hexo 的程序文件，如 Hexo-Blog。打开该文件夹，右键 -&gt; Git Bash Here。</p><h1 id="4-1-安装-Hexo"><a href="#4-1-安装-Hexo" class="headerlink" title="4.1 安装 Hexo"></a>4.1 安装 Hexo</h1><p>使用 npm 一键安装 Hexo 博客程序：</p><p>&#x3D;&#x3D;npm install -g hexo-cli&#x3D;&#x3D;Mac 用户需要管理员权限（sudo），运行这条命令：</p><p>&#x3D;&#x3D;sudo npm install -g hexo-cli&#x3D;&#x3D; 安装时间有点久（真的很慢！），界面也没任何反应，耐心等待。</p><h1 id="4-2-Hexo-初始化和本地预览"><a href="#4-2-Hexo-初始化和本地预览" class="headerlink" title="4.2 Hexo 初始化和本地预览"></a>4.2 Hexo 初始化和本地预览</h1><p>初始化并安装所需组件：</p><p>&#x3D;&#x3D;hexo init ​&#x3D;&#x3D; # 初始化 &#x3D;&#x3D;npm install&#x3D;&#x3D; # 安装组件 完成后依次输入下面命令，启动本地服务器进行预览：</p><p>&#x3D;&#x3D;hexo g&#x3D;&#x3D; # 生成页面 &#x3D;&#x3D;hexo s&#x3D;&#x3D; # 启动预览 访问 <a href="http://localhost:4000%EF%BC%8C%E5%87%BA%E7%8E%B0">http://localhost:4000，出现</a> Hexo 默认页面，本地博客安装成功！</p><p>Tips：如果出现页面加载不出来，可能是端口被占用了。Ctrl+C 关闭服务器，运行 hexo server -p 5000 更改端口号后重试。</p><p>Hexo 博客文件夹目录结构如下：</p><h1 id="5-部署"><a href="#5-部署" class="headerlink" title="5. 部署"></a>5. 部署</h1><p>部署Hexo 到 GitHub Pages 本地博客测试成功后，就是上传到 GitHub 进行部署，使其能够在网络上访问。</p><p>首先安装 hexo-deployer-git：</p><p>&#x3D;&#x3D;npm install hexo-deployer-git –save&#x3D;&#x3D; 然后修改 _config.yml 文件末尾的 Deployment 部分，修改成如下：</p><p>deploy: type: git repository: <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#105;&#116;&#104;&#x75;&#x62;&#46;&#99;&#111;&#x6d;">git@github.com</a>:用户名&#x2F;用户名.github.io.git branch: master 完成后运行 hexo d 将网站上传部署到 GitHub Pages。</p><p>完成！这时访问我们的 GitHub 域名 https:&#x2F;&#x2F;用户名.github.io 就可以看到 Hexo 网站了。</p><ol start="6"><li>绑定域名（可选） 博客搭建完成使用的是 GitHub 的子域名 用户名.<a href="http://github.io,我们可以为/">http://github.io，我们可以为</a> Hexo 博客绑定自己的域名替换 GitHub 域名，更加个性化和专业，也利于 SEO。</li></ol><p>我们使用 Namesilo 进行注册，便宜好用没啥套路，使用优惠码 okoff 优惠一美元，com 域名大概 50 块一年。</p><h1 id="6-1-域名注册和解析"><a href="#6-1-域名注册和解析" class="headerlink" title="6.1 域名注册和解析"></a>6.1 域名注册和解析</h1><p>域名注册和解析教程：Namesilo 域名购买及使用教程 按上面教程注册并解析域名，在 DNS 设置部分，删除自带的记录，然后添加 CNAME 记录将 www 域名解析指向 用户名.github.io。</p><h1 id="6-2-绑定域名到-Hexo-博客"><a href="#6-2-绑定域名到-Hexo-博客" class="headerlink" title="6.2 绑定域名到 Hexo 博客"></a>6.2 绑定域名到 Hexo 博客</h1><p>进入本地博客文件夹的 source 目录，打开记事本，里面输入自己的域名，如  <a href="http://www.example.com,保存名称为/">www.example.com，保存名称为</a> “CNAME”，格式为 “所有文件”（无 .txt 后缀）。</p><p>清除缓存等文件并重新发布网站：</p><p>hexo clean # 清除缓存文件等 hexo g # 生成页面 hexo s # 启动预览 现在就可以使用自己的域名访问 Hexo 博客了。</p><h1 id="6-3-开启-HTTPS"><a href="#6-3-开启-HTTPS" class="headerlink" title="6.3 开启 HTTPS"></a>6.3 开启 HTTPS</h1><p>配置自己的域名后，需要我们手动开启 HTTPS。打开博客所在 GitHub 仓库，Settings -&gt; 下拉找到 GitHub Pages -&gt; 勾选 Enforce HTTPS。</p><p>HTTPS 证书部署成功需要一定时间，等大概几分钟再访问域名，就可以看到域名前面的小绿锁了，HTTPS 配置完成！</p><h1 id="7-1-发布文章"><a href="#7-1-发布文章" class="headerlink" title="7.1 发布文章"></a>7.1 发布文章</h1><p>进入博客所在目录，右键打开 Git Bash Here，创建博文：</p><p>hexo new “My New Post” 然后 source 文件夹中会出现一个 My New Post.md 文件，就可以使用 Markdown 编辑器在该文件中撰写文章了。</p><p>写完后运行下面代码将文章渲染并部署到 GitHub Pages 上完成发布。以后每次发布文章都是这两条命令。</p><p>hexo g # 生成页面 hexo d # 部署发布 也可以不使用命令自己创建 .md 文件，只需在文件开头手动加入如下格式 Front-matter 即可，写完后运行 hexo g 和 hexo d 发布。</p><p>title: Hello World # 标题 date: 2019&#x2F;3&#x2F;26 hh:mm:ss # 时间 categories: # 分类</p><ul><li>Diary tags: # 标签</li><li>PS3</li><li>Games</li></ul><h1 id="7-2-网站设置"><a href="#7-2-网站设置" class="headerlink" title="7.2 网站设置"></a>7.2 网站设置</h1><p>包括网站名称、描述、作者、链接样式等，全部在网站目录下的 _config.yml 文件中，参考官方文档按需要编辑。</p><p>注意：冒号后要加一个空格！</p><h1 id="7-3-更换主题"><a href="#7-3-更换主题" class="headerlink" title="7.3 更换主题"></a>7.3 更换主题</h1><p>在 Themes | Hexo 选择一个喜欢的主题，比如 NexT，进入网站目录打开 Git Bash Here 下载主题：</p><p>git clone <a href="https://github.com/iissnan/hexo-theme-next%EF%BC%8Cthemes/next">https://github.com/iissnan/hexo-theme-next，themes/next</a> 然后修改 _config.yml 中的 theme 为新主题名称 next，发布。（有的主题需要将 _config.yml 替换为主题自带的，参考主题说明。）</p><h1 id="7-4-常用命令"><a href="#7-4-常用命令" class="headerlink" title="7.4 常用命令"></a>7.4 常用命令</h1><p>hexo new “name” # 新建文章<br>hexo new page “name” # 新建页面<br>hexo g # 生成页面<br>hexo d # 部署<br>hexo g -d # 生成页面并部署<br>hexo s # 本地预览<br>hexo clean # 清除缓存和已生成的静态文件<br>hexo help # 帮助</p><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h2 id="7-4-1-Hexo-设置显示文章摘要，首页不显示全文"><a href="#7-4-1-Hexo-设置显示文章摘要，首页不显示全文" class="headerlink" title="7.4.1 Hexo 设置显示文章摘要，首页不显示全文"></a>7.4.1 Hexo 设置显示文章摘要，首页不显示全文</h2><p>Hexo 主页文章列表默认会显示文章全文，浏览时很不方便，可以在文章中插入  进行分段。</p><p>该代码前面的内容会作为摘要显示，而后面的内容会替换为 “Read More” 隐藏起来。</p><h2 id="7-4-2设置网站图标"><a href="#7-4-2设置网站图标" class="headerlink" title="7.4.2设置网站图标"></a>7.4.2设置网站图标</h2><p>进入 themes&#x2F;主题 文件夹，打开 _config.yml 配置文件，找到 favicon 修改，一般格式为：favicon: 图标地址。（不同主题可能略有差别）</p><h2 id="7-4-3修改并部署后没有效果"><a href="#7-4-3修改并部署后没有效果" class="headerlink" title="7.4.3修改并部署后没有效果"></a>7.4.3修改并部署后没有效果</h2><p>使用 hexo clean 清理后重新部署。</p><h2 id="7-4-4开启-HTTPS-后访问网站显示连接不安全？"><a href="#7-4-4开启-HTTPS-后访问网站显示连接不安全？" class="headerlink" title="7.4.4开启 HTTPS 后访问网站显示连接不安全？"></a>7.4.4开启 HTTPS 后访问网站显示连接不安全？</h2><p>证书还未部署生效，等待一会儿，清除浏览器缓存再试。</p><h2 id="7-4-5-Mac-安装-Hexo-报错无法安装"><a href="#7-4-5-Mac-安装-Hexo-报错无法安装" class="headerlink" title="7.4.5 Mac 安装 Hexo 报错无法安装"></a>7.4.5 Mac 安装 Hexo 报错无法安装</h2><p>Mac 用户需要管理员权限运行，使用 sudo npm install -g hexo-cli 命令安装。</p><h2 id="7-4-6npm-下载速度慢，甚至完全没反应"><a href="#7-4-6npm-下载速度慢，甚至完全没反应" class="headerlink" title="7.4.6npm 下载速度慢，甚至完全没反应"></a>7.4.6npm 下载速度慢，甚至完全没反应</h2><p>使用 npm 安装程序等待很久也没反应，或者下载速度很慢，可以更换 npm 源为国内 npm 镜像。</p><p>临时更换方法：在 npm 安装命令后面加上：<br>registry <a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>Hexo 是一种纯静态的博客，我们必须要在本地完成文章的编辑再部署到 GitHub 上，依赖于本地环境。不能像 WordPress 或 Typecho 那样的动态博客一样能直接在浏览器中完成撰文和发布。</p><p>可以说是一种比较极客的写博客方式，但是优势也是明显的——免费稳定省心，比较适合爱折腾研究的用户，或者没有在线发文需求的朋友。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;近些年来很多用户都喜欢使用 GitHub Pages 来搭建 Hexo 静态博客网站，其最吸引人的莫过于完全免费使用，并且非常稳定。&lt;/p&gt;
+&lt;p&gt;虽然搭建时比较麻烦，有点折腾，但是配置完成后，基本不需要操心维护的事，甚至放了几年都忘记了，打开来看文章依然还在。&lt;br&gt;本文
+      
+    
+    </summary>
+    
+    
+      <category term="日常随笔" scheme="https://www.langya.org.cn/categories/essays/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.langya.org.cn/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="https://www.langya.org.cn/tags/GitHub/"/>
+    
+      <category term="butterfly" scheme="https://www.langya.org.cn/tags/butterfly/"/>
+    
+      <category term="博客搭建" scheme="https://www.langya.org.cn/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="教程" scheme="https://www.langya.org.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="blog" scheme="https://www.langya.org.cn/tags/blog/"/>
+    
+      <category term="cloudflare" scheme="https://www.langya.org.cn/tags/cloudflare/"/>
+    
+      <category term="免费" scheme="https://www.langya.org.cn/tags/%E5%85%8D%E8%B4%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小白教程 使用 Hexo+GitHub 搭建个人免费博客</title>
+    <link href="https://www.langya.org.cn/moments/7.html"/>
+    <id>https://www.langya.org.cn/moments/7.html</id>
+    <published>2026-04-20T09:00:00.000Z</published>
+    <updated>2026-04-22T08:08:08.038Z</updated>
+    
+    <content type="html"><![CDATA[<p>近些年来很多用户都喜欢使用 GitHub Pages 来搭建 Hexo 静态博客网站，其最吸引人的莫过于完全免费使用，并且非常稳定。</p><p>虽然搭建时比较麻烦，有点折腾，但是配置完成后，基本不需要操心维护的事，甚至放了几年都忘记了，打开来看文章依然还在。<br>本文就详细介绍下如何使用 Hexo + GitHub 搭建免费个人博客网站的教程。</p><p>为了照顾小白用户（第一次使用 GitHub 和 Hexo），尽可能详细，包括常见的坑和问题都有提示说明。下面目录中第 3~5 步为最重要的步骤，其他内容如果已经会的可以选择性跳过。</p><p>看起来有点繁杂，捋顺了倒也简单，认真跟教程走，完整操作一遍大概需要 30 分钟。</p><p>内容目录：</p><p>简介：GitHub Pages 和 Hexo &amp; 原理</p><p>准备：环境搭建 1.1. 注意事项 1.2. 环境搭建 连接 Github 创建 Github Pages 仓库 本地安装 Hexo 博客程序 4.1. 安装 Hexo 4.2. Hexo 初始化和本地预览 部署 Hexo 到 GitHub Pages 绑定域名（可选） 开始使用 7.1. 发布文章 7.2. 网站设置 7.3. 更换主题 7.4. 常用代码 常见问题 简介</p><h1 id="GitHub-Pages-是什么？"><a href="#GitHub-Pages-是什么？" class="headerlink" title="GitHub Pages 是什么？"></a>GitHub Pages 是什么？</h1><p>What is <a href="https://github.com/">GitHub</a> Pages? - GitHub Help GitHub Pages 是由 GitHub 官方提供的一种免费的静态站点托管服务，让我们可以在 GitHub 仓库里托管和发布自己的静态网站页面。</p><h1 id="Hexo-是什么？"><a href="#Hexo-是什么？" class="headerlink" title="Hexo 是什么？"></a>Hexo 是什么？</h1><p>官网：<a href="http://hexo.io/">hexo.io</a>Hexo 是一个快速、简洁且高效的静态博客框架，它基于 Node.js 运行，可以将我们撰写的 Markdown 文档解析渲染成静态的 HTML 网页。</p><h1 id="Hexo-GitHub-文章发布原理"><a href="#Hexo-GitHub-文章发布原理" class="headerlink" title="Hexo + GitHub 文章发布原理"></a>Hexo + GitHub 文章发布原理</h1><p>在本地撰写 Markdown 格式文章后，通过 Hexo 解析文档，渲染生成具有主题样式的 HTML 静态网页，再推送到 GitHub 上完成博文的发布。</p><h1 id="优点和不足"><a href="#优点和不足" class="headerlink" title="优点和不足"></a>优点和不足</h1><p>优点：完全免费；静态站点，轻量快速；可按需求自由定制改造；托管在 GitHub，安全省心；迁移方便……</p><p>不足：发文不便，依赖于本地环境；更适合个人博客使用；GitHub 在国内访问速度有点不快。</p><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>输入代码时，核对准确，最好切换成英文输入法； 将文中的 “用户名” 和 “邮箱” 替换为自己的 GitHub 账户名和绑定的邮箱； 统一使用 Git Bash 进行操作（支持 Win、Mac）； 小白请严格按步骤进行，不要跳！</p><h1 id="1-1环境搭建"><a href="#1-1环境搭建" class="headerlink" title="1.1环境搭建"></a>1.1环境搭建</h1><p>Hexo 基于 Node.js，搭建过程中还需要使用 npm（Node.js 已带） 和 git，因此先搭建本地操作环境，安装 Node.js 和 Git。</p><p>Node.js：<a href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a><br>Git：<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>下载 Node.js 和 Git 程序并安装，一路点 “下一步” 按默认配置完成安装。</p><p>安装完成后，Win+R 输入 cmd 并打开，依次输入 ​&#x3D;&#x3D;node -v&#x3D;&#x3D;​、&#x3D;&#x3D;npm -v&#x3D;&#x3D; 和&#x3D;&#x3D;​ git –version&#x3D;&#x3D; 并回车，出现程序版本号即可。</p><h1 id="1-2-注册GitHub"><a href="#1-2-注册GitHub" class="headerlink" title="1.2 注册GitHub"></a>1.2 注册GitHub</h1><p>连接 Github 使用邮箱注册 GitHub 账户，选择免费账户（Free），并完成邮件验证。</p><p>右键 -&gt; Git Bash Here，设置用户名和邮箱：</p><p>&#x3D;&#x3D;git config –global user.name “GitHub 用户名”&#x3D;&#x3D;&#x3D;&#x3D;git config –global user.email “GitHub 邮箱”&#x3D;&#x3D;创建 SSH 密匙：</p><p>输入​&#x3D;&#x3D;​ ssh-keygen -t rsa -C “GitHub 邮箱”&#x3D;&#x3D;​，然后一路回车。</p><p>添加密匙：</p><p>进入 [C:\Users\用户名.ssh] 目录（要勾选显示“隐藏的项目”），用记事本打开公钥 id_rsa.pub 文件并复制里面的内容。</p><p>登陆 GitHub ，进入 Settings 页面，选择左边栏的 SSH and GPG keys，点击 New SSH key。</p><p>Title 随便取个名字，粘贴复制的 id_rsa.pub 内容到 Key 中，点击 Add SSH key 完成添加。</p><p>验证连接：</p><p>打开 Git Bash，输入 &#x3D;&#x3D;ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#117;&#98;&#46;&#99;&#111;&#x6d;">git@github.com</a>&#x3D;&#x3D; 出现 “Are you sure……”，输入 yes 回车确认。</p><p>显示 “Hi xxx! You’ve successfully……” 即连接成功。</p><h1 id="1-3-创建GitHub-pages"><a href="#1-3-创建GitHub-pages" class="headerlink" title="1.3 创建GitHub pages"></a>1.3 创建GitHub pages</h1><p>创建 Github Pages 仓库 GitHub 主页右上角加号 -&gt; New repository：</p><p>Repository name 中输入 用户名.github.io 勾选 “Initialize this repository with a README” Description 选填 填好后点击 Create repository 创建。</p><p>创建后默认自动启用 HTTPS，博客地址为：https:&#x2F;&#x2F;用户名.github.io</p><p>#1.4 新建hexo本地程序<br>本地安装 Hexo 博客程序 新建一个文件夹用来存放 Hexo 的程序文件，如 Hexo-Blog。打开该文件夹，右键 -&gt; Git Bash Here。</p><h1 id="4-1-安装-Hexo"><a href="#4-1-安装-Hexo" class="headerlink" title="4.1 安装 Hexo"></a>4.1 安装 Hexo</h1><p>使用 npm 一键安装 Hexo 博客程序：</p><p>&#x3D;&#x3D;npm install -g hexo-cli&#x3D;&#x3D;Mac 用户需要管理员权限（sudo），运行这条命令：</p><p>&#x3D;&#x3D;sudo npm install -g hexo-cli&#x3D;&#x3D; 安装时间有点久（真的很慢！），界面也没任何反应，耐心等待。</p><h1 id="4-2-Hexo-初始化和本地预览"><a href="#4-2-Hexo-初始化和本地预览" class="headerlink" title="4.2 Hexo 初始化和本地预览"></a>4.2 Hexo 初始化和本地预览</h1><p>初始化并安装所需组件：</p><p>&#x3D;&#x3D;hexo init ​&#x3D;&#x3D; # 初始化 &#x3D;&#x3D;npm install&#x3D;&#x3D; # 安装组件 完成后依次输入下面命令，启动本地服务器进行预览：</p><p>&#x3D;&#x3D;hexo g&#x3D;&#x3D; # 生成页面 &#x3D;&#x3D;hexo s&#x3D;&#x3D; # 启动预览 访问 <a href="http://localhost:4000%EF%BC%8C%E5%87%BA%E7%8E%B0">http://localhost:4000，出现</a> Hexo 默认页面，本地博客安装成功！</p><p>Tips：如果出现页面加载不出来，可能是端口被占用了。Ctrl+C 关闭服务器，运行 hexo server -p 5000 更改端口号后重试。</p><p>Hexo 博客文件夹目录结构如下：</p><h1 id="5-部署"><a href="#5-部署" class="headerlink" title="5. 部署"></a>5. 部署</h1><p>部署Hexo 到 GitHub Pages 本地博客测试成功后，就是上传到 GitHub 进行部署，使其能够在网络上访问。</p><p>首先安装 hexo-deployer-git：</p><p>&#x3D;&#x3D;npm install hexo-deployer-git –save&#x3D;&#x3D; 然后修改 _config.yml 文件末尾的 Deployment 部分，修改成如下：</p><p>deploy: type: git repository: <a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;">git@github.com</a>:用户名&#x2F;用户名.github.io.git branch: master 完成后运行 hexo d 将网站上传部署到 GitHub Pages。</p><p>完成！这时访问我们的 GitHub 域名 https:&#x2F;&#x2F;用户名.github.io 就可以看到 Hexo 网站了。</p><ol start="6"><li>绑定域名（可选） 博客搭建完成使用的是 GitHub 的子域名 用户名.<a href="http://github.io,我们可以为/">http://github.io，我们可以为</a> Hexo 博客绑定自己的域名替换 GitHub 域名，更加个性化和专业，也利于 SEO。</li></ol><p>我们使用 Namesilo 进行注册，便宜好用没啥套路，使用优惠码 okoff 优惠一美元，com 域名大概 50 块一年。</p><h1 id="6-1-域名注册和解析"><a href="#6-1-域名注册和解析" class="headerlink" title="6.1 域名注册和解析"></a>6.1 域名注册和解析</h1><p>域名注册和解析教程：Namesilo 域名购买及使用教程 按上面教程注册并解析域名，在 DNS 设置部分，删除自带的记录，然后添加 CNAME 记录将 www 域名解析指向 用户名.github.io。</p><h1 id="6-2-绑定域名到-Hexo-博客"><a href="#6-2-绑定域名到-Hexo-博客" class="headerlink" title="6.2 绑定域名到 Hexo 博客"></a>6.2 绑定域名到 Hexo 博客</h1><p>进入本地博客文件夹的 source 目录，打开记事本，里面输入自己的域名，如  <a href="http://www.example.com,保存名称为/">www.example.com，保存名称为</a> “CNAME”，格式为 “所有文件”（无 .txt 后缀）。</p><p>清除缓存等文件并重新发布网站：</p><p>hexo clean # 清除缓存文件等 hexo g # 生成页面 hexo s # 启动预览 现在就可以使用自己的域名访问 Hexo 博客了。</p><h1 id="6-3-开启-HTTPS"><a href="#6-3-开启-HTTPS" class="headerlink" title="6.3 开启 HTTPS"></a>6.3 开启 HTTPS</h1><p>配置自己的域名后，需要我们手动开启 HTTPS。打开博客所在 GitHub 仓库，Settings -&gt; 下拉找到 GitHub Pages -&gt; 勾选 Enforce HTTPS。</p><p>HTTPS 证书部署成功需要一定时间，等大概几分钟再访问域名，就可以看到域名前面的小绿锁了，HTTPS 配置完成！</p><h1 id="7-1-发布文章"><a href="#7-1-发布文章" class="headerlink" title="7.1 发布文章"></a>7.1 发布文章</h1><p>进入博客所在目录，右键打开 Git Bash Here，创建博文：</p><p>hexo new “My New Post” 然后 source 文件夹中会出现一个 My New Post.md 文件，就可以使用 Markdown 编辑器在该文件中撰写文章了。</p><p>写完后运行下面代码将文章渲染并部署到 GitHub Pages 上完成发布。以后每次发布文章都是这两条命令。</p><p>hexo g # 生成页面 hexo d # 部署发布 也可以不使用命令自己创建 .md 文件，只需在文件开头手动加入如下格式 Front-matter 即可，写完后运行 hexo g 和 hexo d 发布。</p><p>title: Hello World # 标题 date: 2019&#x2F;3&#x2F;26 hh:mm:ss # 时间 categories: # 分类</p><ul><li>Diary tags: # 标签</li><li>PS3</li><li>Games</li></ul><h1 id="7-2-网站设置"><a href="#7-2-网站设置" class="headerlink" title="7.2 网站设置"></a>7.2 网站设置</h1><p>包括网站名称、描述、作者、链接样式等，全部在网站目录下的 _config.yml 文件中，参考官方文档按需要编辑。</p><p>注意：冒号后要加一个空格！</p><h1 id="7-3-更换主题"><a href="#7-3-更换主题" class="headerlink" title="7.3 更换主题"></a>7.3 更换主题</h1><p>在 Themes | Hexo 选择一个喜欢的主题，比如 NexT，进入网站目录打开 Git Bash Here 下载主题：</p><p>git clone <a href="https://github.com/iissnan/hexo-theme-next%EF%BC%8Cthemes/next">https://github.com/iissnan/hexo-theme-next，themes/next</a> 然后修改 _config.yml 中的 theme 为新主题名称 next，发布。（有的主题需要将 _config.yml 替换为主题自带的，参考主题说明。）</p><h1 id="7-4-常用命令"><a href="#7-4-常用命令" class="headerlink" title="7.4 常用命令"></a>7.4 常用命令</h1><p>hexo new “name” # 新建文章<br>hexo new page “name” # 新建页面<br>hexo g # 生成页面<br>hexo d # 部署<br>hexo g -d # 生成页面并部署<br>hexo s # 本地预览<br>hexo clean # 清除缓存和已生成的静态文件<br>hexo help # 帮助</p><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h2 id="7-4-1-Hexo-设置显示文章摘要，首页不显示全文"><a href="#7-4-1-Hexo-设置显示文章摘要，首页不显示全文" class="headerlink" title="7.4.1 Hexo 设置显示文章摘要，首页不显示全文"></a>7.4.1 Hexo 设置显示文章摘要，首页不显示全文</h2><p>Hexo 主页文章列表默认会显示文章全文，浏览时很不方便，可以在文章中插入  进行分段。</p><p>该代码前面的内容会作为摘要显示，而后面的内容会替换为 “Read More” 隐藏起来。</p><h2 id="7-4-2设置网站图标"><a href="#7-4-2设置网站图标" class="headerlink" title="7.4.2设置网站图标"></a>7.4.2设置网站图标</h2><p>进入 themes&#x2F;主题 文件夹，打开 _config.yml 配置文件，找到 favicon 修改，一般格式为：favicon: 图标地址。（不同主题可能略有差别）</p><h2 id="7-4-3修改并部署后没有效果"><a href="#7-4-3修改并部署后没有效果" class="headerlink" title="7.4.3修改并部署后没有效果"></a>7.4.3修改并部署后没有效果</h2><p>使用 hexo clean 清理后重新部署。</p><h2 id="7-4-4开启-HTTPS-后访问网站显示连接不安全？"><a href="#7-4-4开启-HTTPS-后访问网站显示连接不安全？" class="headerlink" title="7.4.4开启 HTTPS 后访问网站显示连接不安全？"></a>7.4.4开启 HTTPS 后访问网站显示连接不安全？</h2><p>证书还未部署生效，等待一会儿，清除浏览器缓存再试。</p><h2 id="7-4-5-Mac-安装-Hexo-报错无法安装"><a href="#7-4-5-Mac-安装-Hexo-报错无法安装" class="headerlink" title="7.4.5 Mac 安装 Hexo 报错无法安装"></a>7.4.5 Mac 安装 Hexo 报错无法安装</h2><p>Mac 用户需要管理员权限运行，使用 sudo npm install -g hexo-cli 命令安装。</p><h2 id="7-4-6npm-下载速度慢，甚至完全没反应"><a href="#7-4-6npm-下载速度慢，甚至完全没反应" class="headerlink" title="7.4.6npm 下载速度慢，甚至完全没反应"></a>7.4.6npm 下载速度慢，甚至完全没反应</h2><p>使用 npm 安装程序等待很久也没反应，或者下载速度很慢，可以更换 npm 源为国内 npm 镜像。</p><p>临时更换方法：在 npm 安装命令后面加上：<br>registry <a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>Hexo 是一种纯静态的博客，我们必须要在本地完成文章的编辑再部署到 GitHub 上，依赖于本地环境。不能像 WordPress 或 Typecho 那样的动态博客一样能直接在浏览器中完成撰文和发布。</p><p>可以说是一种比较极客的写博客方式，但是优势也是明显的——免费稳定省心，比较适合爱折腾研究的用户，或者没有在线发文需求的朋友。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;近些年来很多用户都喜欢使用 GitHub Pages 来搭建 Hexo 静态博客网站，其最吸引人的莫过于完全免费使用，并且非常稳定。&lt;/p&gt;
+&lt;p&gt;虽然搭建时比较麻烦，有点折腾，但是配置完成后，基本不需要操心维护的事，甚至放了几年都忘记了，打开来看文章依然还在。&lt;br&gt;本文
+      
+    
+    </summary>
+    
+    
+      <category term="生活随拍" scheme="https://www.langya.org.cn/categories/moments/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.langya.org.cn/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="https://www.langya.org.cn/tags/GitHub/"/>
+    
+      <category term="butterfly" scheme="https://www.langya.org.cn/tags/butterfly/"/>
+    
+      <category term="博客搭建" scheme="https://www.langya.org.cn/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="教程" scheme="https://www.langya.org.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="blog" scheme="https://www.langya.org.cn/tags/blog/"/>
+    
+      <category term="cloudflare" scheme="https://www.langya.org.cn/tags/cloudflare/"/>
+    
+      <category term="免费" scheme="https://www.langya.org.cn/tags/%E5%85%8D%E8%B4%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小白教程 使用 Hexo+GitHub 搭建个人免费博客</title>
+    <link href="https://www.langya.org.cn/share/6.html"/>
+    <id>https://www.langya.org.cn/share/6.html</id>
+    <published>2026-04-20T08:00:00.000Z</published>
+    <updated>2026-04-22T08:08:15.717Z</updated>
+    
+    <content type="html"><![CDATA[<p>近些年来很多用户都喜欢使用 GitHub Pages 来搭建 Hexo 静态博客网站，其最吸引人的莫过于完全免费使用，并且非常稳定。</p><p>虽然搭建时比较麻烦，有点折腾，但是配置完成后，基本不需要操心维护的事，甚至放了几年都忘记了，打开来看文章依然还在。<br>本文就详细介绍下如何使用 Hexo + GitHub 搭建免费个人博客网站的教程。</p><p>为了照顾小白用户（第一次使用 GitHub 和 Hexo），尽可能详细，包括常见的坑和问题都有提示说明。下面目录中第 3~5 步为最重要的步骤，其他内容如果已经会的可以选择性跳过。</p><p>看起来有点繁杂，捋顺了倒也简单，认真跟教程走，完整操作一遍大概需要 30 分钟。</p><p>内容目录：</p><p>简介：GitHub Pages 和 Hexo &amp; 原理</p><p>准备：环境搭建 1.1. 注意事项 1.2. 环境搭建 连接 Github 创建 Github Pages 仓库 本地安装 Hexo 博客程序 4.1. 安装 Hexo 4.2. Hexo 初始化和本地预览 部署 Hexo 到 GitHub Pages 绑定域名（可选） 开始使用 7.1. 发布文章 7.2. 网站设置 7.3. 更换主题 7.4. 常用代码 常见问题 简介</p><h1 id="GitHub-Pages-是什么？"><a href="#GitHub-Pages-是什么？" class="headerlink" title="GitHub Pages 是什么？"></a>GitHub Pages 是什么？</h1><p>What is <a href="https://github.com/">GitHub</a> Pages? - GitHub Help GitHub Pages 是由 GitHub 官方提供的一种免费的静态站点托管服务，让我们可以在 GitHub 仓库里托管和发布自己的静态网站页面。</p><h1 id="Hexo-是什么？"><a href="#Hexo-是什么？" class="headerlink" title="Hexo 是什么？"></a>Hexo 是什么？</h1><p>官网：<a href="http://hexo.io/">hexo.io</a>Hexo 是一个快速、简洁且高效的静态博客框架，它基于 Node.js 运行，可以将我们撰写的 Markdown 文档解析渲染成静态的 HTML 网页。</p><h1 id="Hexo-GitHub-文章发布原理"><a href="#Hexo-GitHub-文章发布原理" class="headerlink" title="Hexo + GitHub 文章发布原理"></a>Hexo + GitHub 文章发布原理</h1><p>在本地撰写 Markdown 格式文章后，通过 Hexo 解析文档，渲染生成具有主题样式的 HTML 静态网页，再推送到 GitHub 上完成博文的发布。</p><h1 id="优点和不足"><a href="#优点和不足" class="headerlink" title="优点和不足"></a>优点和不足</h1><p>优点：完全免费；静态站点，轻量快速；可按需求自由定制改造；托管在 GitHub，安全省心；迁移方便……</p><p>不足：发文不便，依赖于本地环境；更适合个人博客使用；GitHub 在国内访问速度有点不快。</p><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>输入代码时，核对准确，最好切换成英文输入法； 将文中的 “用户名” 和 “邮箱” 替换为自己的 GitHub 账户名和绑定的邮箱； 统一使用 Git Bash 进行操作（支持 Win、Mac）； 小白请严格按步骤进行，不要跳！</p><h1 id="1-1环境搭建"><a href="#1-1环境搭建" class="headerlink" title="1.1环境搭建"></a>1.1环境搭建</h1><p>Hexo 基于 Node.js，搭建过程中还需要使用 npm（Node.js 已带） 和 git，因此先搭建本地操作环境，安装 Node.js 和 Git。</p><p>Node.js：<a href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a><br>Git：<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>下载 Node.js 和 Git 程序并安装，一路点 “下一步” 按默认配置完成安装。</p><p>安装完成后，Win+R 输入 cmd 并打开，依次输入 ​&#x3D;&#x3D;node -v&#x3D;&#x3D;​、&#x3D;&#x3D;npm -v&#x3D;&#x3D; 和&#x3D;&#x3D;​ git –version&#x3D;&#x3D; 并回车，出现程序版本号即可。</p><h1 id="1-2-注册GitHub"><a href="#1-2-注册GitHub" class="headerlink" title="1.2 注册GitHub"></a>1.2 注册GitHub</h1><p>连接 Github 使用邮箱注册 GitHub 账户，选择免费账户（Free），并完成邮件验证。</p><p>右键 -&gt; Git Bash Here，设置用户名和邮箱：</p><p>&#x3D;&#x3D;git config –global user.name “GitHub 用户名”&#x3D;&#x3D;&#x3D;&#x3D;git config –global user.email “GitHub 邮箱”&#x3D;&#x3D;创建 SSH 密匙：</p><p>输入​&#x3D;&#x3D;​ ssh-keygen -t rsa -C “GitHub 邮箱”&#x3D;&#x3D;​，然后一路回车。</p><p>添加密匙：</p><p>进入 [C:\Users\用户名.ssh] 目录（要勾选显示“隐藏的项目”），用记事本打开公钥 id_rsa.pub 文件并复制里面的内容。</p><p>登陆 GitHub ，进入 Settings 页面，选择左边栏的 SSH and GPG keys，点击 New SSH key。</p><p>Title 随便取个名字，粘贴复制的 id_rsa.pub 内容到 Key 中，点击 Add SSH key 完成添加。</p><p>验证连接：</p><p>打开 Git Bash，输入 &#x3D;&#x3D;ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;">git@github.com</a>&#x3D;&#x3D; 出现 “Are you sure……”，输入 yes 回车确认。</p><p>显示 “Hi xxx! You’ve successfully……” 即连接成功。</p><h1 id="1-3-创建GitHub-pages"><a href="#1-3-创建GitHub-pages" class="headerlink" title="1.3 创建GitHub pages"></a>1.3 创建GitHub pages</h1><p>创建 Github Pages 仓库 GitHub 主页右上角加号 -&gt; New repository：</p><p>Repository name 中输入 用户名.github.io 勾选 “Initialize this repository with a README” Description 选填 填好后点击 Create repository 创建。</p><p>创建后默认自动启用 HTTPS，博客地址为：https:&#x2F;&#x2F;用户名.github.io</p><p>#1.4 新建hexo本地程序<br>本地安装 Hexo 博客程序 新建一个文件夹用来存放 Hexo 的程序文件，如 Hexo-Blog。打开该文件夹，右键 -&gt; Git Bash Here。</p><h1 id="4-1-安装-Hexo"><a href="#4-1-安装-Hexo" class="headerlink" title="4.1 安装 Hexo"></a>4.1 安装 Hexo</h1><p>使用 npm 一键安装 Hexo 博客程序：</p><p>&#x3D;&#x3D;npm install -g hexo-cli&#x3D;&#x3D;Mac 用户需要管理员权限（sudo），运行这条命令：</p><p>&#x3D;&#x3D;sudo npm install -g hexo-cli&#x3D;&#x3D; 安装时间有点久（真的很慢！），界面也没任何反应，耐心等待。</p><h1 id="4-2-Hexo-初始化和本地预览"><a href="#4-2-Hexo-初始化和本地预览" class="headerlink" title="4.2 Hexo 初始化和本地预览"></a>4.2 Hexo 初始化和本地预览</h1><p>初始化并安装所需组件：</p><p>&#x3D;&#x3D;hexo init ​&#x3D;&#x3D; # 初始化 &#x3D;&#x3D;npm install&#x3D;&#x3D; # 安装组件 完成后依次输入下面命令，启动本地服务器进行预览：</p><p>&#x3D;&#x3D;hexo g&#x3D;&#x3D; # 生成页面 &#x3D;&#x3D;hexo s&#x3D;&#x3D; # 启动预览 访问 <a href="http://localhost:4000%EF%BC%8C%E5%87%BA%E7%8E%B0">http://localhost:4000，出现</a> Hexo 默认页面，本地博客安装成功！</p><p>Tips：如果出现页面加载不出来，可能是端口被占用了。Ctrl+C 关闭服务器，运行 hexo server -p 5000 更改端口号后重试。</p><p>Hexo 博客文件夹目录结构如下：</p><h1 id="5-部署"><a href="#5-部署" class="headerlink" title="5. 部署"></a>5. 部署</h1><p>部署Hexo 到 GitHub Pages 本地博客测试成功后，就是上传到 GitHub 进行部署，使其能够在网络上访问。</p><p>首先安装 hexo-deployer-git：</p><p>&#x3D;&#x3D;npm install hexo-deployer-git –save&#x3D;&#x3D; 然后修改 _config.yml 文件末尾的 Deployment 部分，修改成如下：</p><p>deploy: type: git repository: <a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#105;&#x74;&#104;&#117;&#98;&#46;&#99;&#111;&#109;">git@github.com</a>:用户名&#x2F;用户名.github.io.git branch: master 完成后运行 hexo d 将网站上传部署到 GitHub Pages。</p><p>完成！这时访问我们的 GitHub 域名 https:&#x2F;&#x2F;用户名.github.io 就可以看到 Hexo 网站了。</p><ol start="6"><li>绑定域名（可选） 博客搭建完成使用的是 GitHub 的子域名 用户名.<a href="http://github.io,我们可以为/">http://github.io，我们可以为</a> Hexo 博客绑定自己的域名替换 GitHub 域名，更加个性化和专业，也利于 SEO。</li></ol><p>我们使用 Namesilo 进行注册，便宜好用没啥套路，使用优惠码 okoff 优惠一美元，com 域名大概 50 块一年。</p><h1 id="6-1-域名注册和解析"><a href="#6-1-域名注册和解析" class="headerlink" title="6.1 域名注册和解析"></a>6.1 域名注册和解析</h1><p>域名注册和解析教程：Namesilo 域名购买及使用教程 按上面教程注册并解析域名，在 DNS 设置部分，删除自带的记录，然后添加 CNAME 记录将 www 域名解析指向 用户名.github.io。</p><h1 id="6-2-绑定域名到-Hexo-博客"><a href="#6-2-绑定域名到-Hexo-博客" class="headerlink" title="6.2 绑定域名到 Hexo 博客"></a>6.2 绑定域名到 Hexo 博客</h1><p>进入本地博客文件夹的 source 目录，打开记事本，里面输入自己的域名，如  <a href="http://www.example.com,保存名称为/">www.example.com，保存名称为</a> “CNAME”，格式为 “所有文件”（无 .txt 后缀）。</p><p>清除缓存等文件并重新发布网站：</p><p>hexo clean # 清除缓存文件等 hexo g # 生成页面 hexo s # 启动预览 现在就可以使用自己的域名访问 Hexo 博客了。</p><h1 id="6-3-开启-HTTPS"><a href="#6-3-开启-HTTPS" class="headerlink" title="6.3 开启 HTTPS"></a>6.3 开启 HTTPS</h1><p>配置自己的域名后，需要我们手动开启 HTTPS。打开博客所在 GitHub 仓库，Settings -&gt; 下拉找到 GitHub Pages -&gt; 勾选 Enforce HTTPS。</p><p>HTTPS 证书部署成功需要一定时间，等大概几分钟再访问域名，就可以看到域名前面的小绿锁了，HTTPS 配置完成！</p><h1 id="7-1-发布文章"><a href="#7-1-发布文章" class="headerlink" title="7.1 发布文章"></a>7.1 发布文章</h1><p>进入博客所在目录，右键打开 Git Bash Here，创建博文：</p><p>hexo new “My New Post” 然后 source 文件夹中会出现一个 My New Post.md 文件，就可以使用 Markdown 编辑器在该文件中撰写文章了。</p><p>写完后运行下面代码将文章渲染并部署到 GitHub Pages 上完成发布。以后每次发布文章都是这两条命令。</p><p>hexo g # 生成页面 hexo d # 部署发布 也可以不使用命令自己创建 .md 文件，只需在文件开头手动加入如下格式 Front-matter 即可，写完后运行 hexo g 和 hexo d 发布。</p><p>title: Hello World # 标题 date: 2019&#x2F;3&#x2F;26 hh:mm:ss # 时间 categories: # 分类</p><ul><li>Diary tags: # 标签</li><li>PS3</li><li>Games</li></ul><h1 id="7-2-网站设置"><a href="#7-2-网站设置" class="headerlink" title="7.2 网站设置"></a>7.2 网站设置</h1><p>包括网站名称、描述、作者、链接样式等，全部在网站目录下的 _config.yml 文件中，参考官方文档按需要编辑。</p><p>注意：冒号后要加一个空格！</p><h1 id="7-3-更换主题"><a href="#7-3-更换主题" class="headerlink" title="7.3 更换主题"></a>7.3 更换主题</h1><p>在 Themes | Hexo 选择一个喜欢的主题，比如 NexT，进入网站目录打开 Git Bash Here 下载主题：</p><p>git clone <a href="https://github.com/iissnan/hexo-theme-next%EF%BC%8Cthemes/next">https://github.com/iissnan/hexo-theme-next，themes/next</a> 然后修改 _config.yml 中的 theme 为新主题名称 next，发布。（有的主题需要将 _config.yml 替换为主题自带的，参考主题说明。）</p><h1 id="7-4-常用命令"><a href="#7-4-常用命令" class="headerlink" title="7.4 常用命令"></a>7.4 常用命令</h1><p>hexo new “name” # 新建文章<br>hexo new page “name” # 新建页面<br>hexo g # 生成页面<br>hexo d # 部署<br>hexo g -d # 生成页面并部署<br>hexo s # 本地预览<br>hexo clean # 清除缓存和已生成的静态文件<br>hexo help # 帮助</p><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h2 id="7-4-1-Hexo-设置显示文章摘要，首页不显示全文"><a href="#7-4-1-Hexo-设置显示文章摘要，首页不显示全文" class="headerlink" title="7.4.1 Hexo 设置显示文章摘要，首页不显示全文"></a>7.4.1 Hexo 设置显示文章摘要，首页不显示全文</h2><p>Hexo 主页文章列表默认会显示文章全文，浏览时很不方便，可以在文章中插入  进行分段。</p><p>该代码前面的内容会作为摘要显示，而后面的内容会替换为 “Read More” 隐藏起来。</p><h2 id="7-4-2设置网站图标"><a href="#7-4-2设置网站图标" class="headerlink" title="7.4.2设置网站图标"></a>7.4.2设置网站图标</h2><p>进入 themes&#x2F;主题 文件夹，打开 _config.yml 配置文件，找到 favicon 修改，一般格式为：favicon: 图标地址。（不同主题可能略有差别）</p><h2 id="7-4-3修改并部署后没有效果"><a href="#7-4-3修改并部署后没有效果" class="headerlink" title="7.4.3修改并部署后没有效果"></a>7.4.3修改并部署后没有效果</h2><p>使用 hexo clean 清理后重新部署。</p><h2 id="7-4-4开启-HTTPS-后访问网站显示连接不安全？"><a href="#7-4-4开启-HTTPS-后访问网站显示连接不安全？" class="headerlink" title="7.4.4开启 HTTPS 后访问网站显示连接不安全？"></a>7.4.4开启 HTTPS 后访问网站显示连接不安全？</h2><p>证书还未部署生效，等待一会儿，清除浏览器缓存再试。</p><h2 id="7-4-5-Mac-安装-Hexo-报错无法安装"><a href="#7-4-5-Mac-安装-Hexo-报错无法安装" class="headerlink" title="7.4.5 Mac 安装 Hexo 报错无法安装"></a>7.4.5 Mac 安装 Hexo 报错无法安装</h2><p>Mac 用户需要管理员权限运行，使用 sudo npm install -g hexo-cli 命令安装。</p><h2 id="7-4-6npm-下载速度慢，甚至完全没反应"><a href="#7-4-6npm-下载速度慢，甚至完全没反应" class="headerlink" title="7.4.6npm 下载速度慢，甚至完全没反应"></a>7.4.6npm 下载速度慢，甚至完全没反应</h2><p>使用 npm 安装程序等待很久也没反应，或者下载速度很慢，可以更换 npm 源为国内 npm 镜像。</p><p>临时更换方法：在 npm 安装命令后面加上：<br>registry <a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>Hexo 是一种纯静态的博客，我们必须要在本地完成文章的编辑再部署到 GitHub 上，依赖于本地环境。不能像 WordPress 或 Typecho 那样的动态博客一样能直接在浏览器中完成撰文和发布。</p><p>可以说是一种比较极客的写博客方式，但是优势也是明显的——免费稳定省心，比较适合爱折腾研究的用户，或者没有在线发文需求的朋友。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;近些年来很多用户都喜欢使用 GitHub Pages 来搭建 Hexo 静态博客网站，其最吸引人的莫过于完全免费使用，并且非常稳定。&lt;/p&gt;
+&lt;p&gt;虽然搭建时比较麻烦，有点折腾，但是配置完成后，基本不需要操心维护的事，甚至放了几年都忘记了，打开来看文章依然还在。&lt;br&gt;本文
+      
+    
+    </summary>
+    
+    
+      <category term="资源分享" scheme="https://www.langya.org.cn/categories/share/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.langya.org.cn/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="https://www.langya.org.cn/tags/GitHub/"/>
+    
+      <category term="butterfly" scheme="https://www.langya.org.cn/tags/butterfly/"/>
+    
+      <category term="博客搭建" scheme="https://www.langya.org.cn/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="教程" scheme="https://www.langya.org.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="blog" scheme="https://www.langya.org.cn/tags/blog/"/>
+    
+      <category term="cloudflare" scheme="https://www.langya.org.cn/tags/cloudflare/"/>
+    
+      <category term="免费" scheme="https://www.langya.org.cn/tags/%E5%85%8D%E8%B4%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小白教程 使用 Hexo+GitHub 搭建个人免费博客</title>
+    <link href="https://www.langya.org.cn/smart/5.html"/>
+    <id>https://www.langya.org.cn/smart/5.html</id>
+    <published>2026-04-20T07:00:00.000Z</published>
+    <updated>2026-04-22T08:08:26.119Z</updated>
+    
+    <content type="html"><![CDATA[<p>近些年来很多用户都喜欢使用 GitHub Pages 来搭建 Hexo 静态博客网站，其最吸引人的莫过于完全免费使用，并且非常稳定。</p><p>虽然搭建时比较麻烦，有点折腾，但是配置完成后，基本不需要操心维护的事，甚至放了几年都忘记了，打开来看文章依然还在。<br>本文就详细介绍下如何使用 Hexo + GitHub 搭建免费个人博客网站的教程。</p><p>为了照顾小白用户（第一次使用 GitHub 和 Hexo），尽可能详细，包括常见的坑和问题都有提示说明。下面目录中第 3~5 步为最重要的步骤，其他内容如果已经会的可以选择性跳过。</p><p>看起来有点繁杂，捋顺了倒也简单，认真跟教程走，完整操作一遍大概需要 30 分钟。</p><p>内容目录：</p><p>简介：GitHub Pages 和 Hexo &amp; 原理</p><p>准备：环境搭建 1.1. 注意事项 1.2. 环境搭建 连接 Github 创建 Github Pages 仓库 本地安装 Hexo 博客程序 4.1. 安装 Hexo 4.2. Hexo 初始化和本地预览 部署 Hexo 到 GitHub Pages 绑定域名（可选） 开始使用 7.1. 发布文章 7.2. 网站设置 7.3. 更换主题 7.4. 常用代码 常见问题 简介</p><h1 id="GitHub-Pages-是什么？"><a href="#GitHub-Pages-是什么？" class="headerlink" title="GitHub Pages 是什么？"></a>GitHub Pages 是什么？</h1><p>What is <a href="https://github.com/">GitHub</a> Pages? - GitHub Help GitHub Pages 是由 GitHub 官方提供的一种免费的静态站点托管服务，让我们可以在 GitHub 仓库里托管和发布自己的静态网站页面。</p><h1 id="Hexo-是什么？"><a href="#Hexo-是什么？" class="headerlink" title="Hexo 是什么？"></a>Hexo 是什么？</h1><p>官网：<a href="http://hexo.io/">hexo.io</a>Hexo 是一个快速、简洁且高效的静态博客框架，它基于 Node.js 运行，可以将我们撰写的 Markdown 文档解析渲染成静态的 HTML 网页。</p><h1 id="Hexo-GitHub-文章发布原理"><a href="#Hexo-GitHub-文章发布原理" class="headerlink" title="Hexo + GitHub 文章发布原理"></a>Hexo + GitHub 文章发布原理</h1><p>在本地撰写 Markdown 格式文章后，通过 Hexo 解析文档，渲染生成具有主题样式的 HTML 静态网页，再推送到 GitHub 上完成博文的发布。</p><h1 id="优点和不足"><a href="#优点和不足" class="headerlink" title="优点和不足"></a>优点和不足</h1><p>优点：完全免费；静态站点，轻量快速；可按需求自由定制改造；托管在 GitHub，安全省心；迁移方便……</p><p>不足：发文不便，依赖于本地环境；更适合个人博客使用；GitHub 在国内访问速度有点不快。</p><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>输入代码时，核对准确，最好切换成英文输入法； 将文中的 “用户名” 和 “邮箱” 替换为自己的 GitHub 账户名和绑定的邮箱； 统一使用 Git Bash 进行操作（支持 Win、Mac）； 小白请严格按步骤进行，不要跳！</p><h1 id="1-1环境搭建"><a href="#1-1环境搭建" class="headerlink" title="1.1环境搭建"></a>1.1环境搭建</h1><p>Hexo 基于 Node.js，搭建过程中还需要使用 npm（Node.js 已带） 和 git，因此先搭建本地操作环境，安装 Node.js 和 Git。</p><p>Node.js：<a href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a><br>Git：<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>下载 Node.js 和 Git 程序并安装，一路点 “下一步” 按默认配置完成安装。</p><p>安装完成后，Win+R 输入 cmd 并打开，依次输入 ​&#x3D;&#x3D;node -v&#x3D;&#x3D;​、&#x3D;&#x3D;npm -v&#x3D;&#x3D; 和&#x3D;&#x3D;​ git –version&#x3D;&#x3D; 并回车，出现程序版本号即可。</p><h1 id="1-2-注册GitHub"><a href="#1-2-注册GitHub" class="headerlink" title="1.2 注册GitHub"></a>1.2 注册GitHub</h1><p>连接 Github 使用邮箱注册 GitHub 账户，选择免费账户（Free），并完成邮件验证。</p><p>右键 -&gt; Git Bash Here，设置用户名和邮箱：</p><p>&#x3D;&#x3D;git config –global user.name “GitHub 用户名”&#x3D;&#x3D;&#x3D;&#x3D;git config –global user.email “GitHub 邮箱”&#x3D;&#x3D;创建 SSH 密匙：</p><p>输入​&#x3D;&#x3D;​ ssh-keygen -t rsa -C “GitHub 邮箱”&#x3D;&#x3D;​，然后一路回车。</p><p>添加密匙：</p><p>进入 [C:\Users\用户名.ssh] 目录（要勾选显示“隐藏的项目”），用记事本打开公钥 id_rsa.pub 文件并复制里面的内容。</p><p>登陆 GitHub ，进入 Settings 页面，选择左边栏的 SSH and GPG keys，点击 New SSH key。</p><p>Title 随便取个名字，粘贴复制的 id_rsa.pub 内容到 Key 中，点击 Add SSH key 完成添加。</p><p>验证连接：</p><p>打开 Git Bash，输入 &#x3D;&#x3D;ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#105;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">git@github.com</a>&#x3D;&#x3D; 出现 “Are you sure……”，输入 yes 回车确认。</p><p>显示 “Hi xxx! You’ve successfully……” 即连接成功。</p><h1 id="1-3-创建GitHub-pages"><a href="#1-3-创建GitHub-pages" class="headerlink" title="1.3 创建GitHub pages"></a>1.3 创建GitHub pages</h1><p>创建 Github Pages 仓库 GitHub 主页右上角加号 -&gt; New repository：</p><p>Repository name 中输入 用户名.github.io 勾选 “Initialize this repository with a README” Description 选填 填好后点击 Create repository 创建。</p><p>创建后默认自动启用 HTTPS，博客地址为：https:&#x2F;&#x2F;用户名.github.io</p><p>#1.4 新建hexo本地程序<br>本地安装 Hexo 博客程序 新建一个文件夹用来存放 Hexo 的程序文件，如 Hexo-Blog。打开该文件夹，右键 -&gt; Git Bash Here。</p><h1 id="4-1-安装-Hexo"><a href="#4-1-安装-Hexo" class="headerlink" title="4.1 安装 Hexo"></a>4.1 安装 Hexo</h1><p>使用 npm 一键安装 Hexo 博客程序：</p><p>&#x3D;&#x3D;npm install -g hexo-cli&#x3D;&#x3D;Mac 用户需要管理员权限（sudo），运行这条命令：</p><p>&#x3D;&#x3D;sudo npm install -g hexo-cli&#x3D;&#x3D; 安装时间有点久（真的很慢！），界面也没任何反应，耐心等待。</p><h1 id="4-2-Hexo-初始化和本地预览"><a href="#4-2-Hexo-初始化和本地预览" class="headerlink" title="4.2 Hexo 初始化和本地预览"></a>4.2 Hexo 初始化和本地预览</h1><p>初始化并安装所需组件：</p><p>&#x3D;&#x3D;hexo init ​&#x3D;&#x3D; # 初始化 &#x3D;&#x3D;npm install&#x3D;&#x3D; # 安装组件 完成后依次输入下面命令，启动本地服务器进行预览：</p><p>&#x3D;&#x3D;hexo g&#x3D;&#x3D; # 生成页面 &#x3D;&#x3D;hexo s&#x3D;&#x3D; # 启动预览 访问 <a href="http://localhost:4000%EF%BC%8C%E5%87%BA%E7%8E%B0">http://localhost:4000，出现</a> Hexo 默认页面，本地博客安装成功！</p><p>Tips：如果出现页面加载不出来，可能是端口被占用了。Ctrl+C 关闭服务器，运行 hexo server -p 5000 更改端口号后重试。</p><p>Hexo 博客文件夹目录结构如下：</p><h1 id="5-部署"><a href="#5-部署" class="headerlink" title="5. 部署"></a>5. 部署</h1><p>部署Hexo 到 GitHub Pages 本地博客测试成功后，就是上传到 GitHub 进行部署，使其能够在网络上访问。</p><p>首先安装 hexo-deployer-git：</p><p>&#x3D;&#x3D;npm install hexo-deployer-git –save&#x3D;&#x3D; 然后修改 _config.yml 文件末尾的 Deployment 部分，修改成如下：</p><p>deploy: type: git repository: <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#x6f;&#109;">git@github.com</a>:用户名&#x2F;用户名.github.io.git branch: master 完成后运行 hexo d 将网站上传部署到 GitHub Pages。</p><p>完成！这时访问我们的 GitHub 域名 https:&#x2F;&#x2F;用户名.github.io 就可以看到 Hexo 网站了。</p><ol start="6"><li>绑定域名（可选） 博客搭建完成使用的是 GitHub 的子域名 用户名.<a href="http://github.io,我们可以为/">http://github.io，我们可以为</a> Hexo 博客绑定自己的域名替换 GitHub 域名，更加个性化和专业，也利于 SEO。</li></ol><p>我们使用 Namesilo 进行注册，便宜好用没啥套路，使用优惠码 okoff 优惠一美元，com 域名大概 50 块一年。</p><h1 id="6-1-域名注册和解析"><a href="#6-1-域名注册和解析" class="headerlink" title="6.1 域名注册和解析"></a>6.1 域名注册和解析</h1><p>域名注册和解析教程：Namesilo 域名购买及使用教程 按上面教程注册并解析域名，在 DNS 设置部分，删除自带的记录，然后添加 CNAME 记录将 www 域名解析指向 用户名.github.io。</p><h1 id="6-2-绑定域名到-Hexo-博客"><a href="#6-2-绑定域名到-Hexo-博客" class="headerlink" title="6.2 绑定域名到 Hexo 博客"></a>6.2 绑定域名到 Hexo 博客</h1><p>进入本地博客文件夹的 source 目录，打开记事本，里面输入自己的域名，如  <a href="http://www.example.com,保存名称为/">www.example.com，保存名称为</a> “CNAME”，格式为 “所有文件”（无 .txt 后缀）。</p><p>清除缓存等文件并重新发布网站：</p><p>hexo clean # 清除缓存文件等 hexo g # 生成页面 hexo s # 启动预览 现在就可以使用自己的域名访问 Hexo 博客了。</p><h1 id="6-3-开启-HTTPS"><a href="#6-3-开启-HTTPS" class="headerlink" title="6.3 开启 HTTPS"></a>6.3 开启 HTTPS</h1><p>配置自己的域名后，需要我们手动开启 HTTPS。打开博客所在 GitHub 仓库，Settings -&gt; 下拉找到 GitHub Pages -&gt; 勾选 Enforce HTTPS。</p><p>HTTPS 证书部署成功需要一定时间，等大概几分钟再访问域名，就可以看到域名前面的小绿锁了，HTTPS 配置完成！</p><h1 id="7-1-发布文章"><a href="#7-1-发布文章" class="headerlink" title="7.1 发布文章"></a>7.1 发布文章</h1><p>进入博客所在目录，右键打开 Git Bash Here，创建博文：</p><p>hexo new “My New Post” 然后 source 文件夹中会出现一个 My New Post.md 文件，就可以使用 Markdown 编辑器在该文件中撰写文章了。</p><p>写完后运行下面代码将文章渲染并部署到 GitHub Pages 上完成发布。以后每次发布文章都是这两条命令。</p><p>hexo g # 生成页面 hexo d # 部署发布 也可以不使用命令自己创建 .md 文件，只需在文件开头手动加入如下格式 Front-matter 即可，写完后运行 hexo g 和 hexo d 发布。</p><p>title: Hello World # 标题 date: 2019&#x2F;3&#x2F;26 hh:mm:ss # 时间 categories: # 分类</p><ul><li>Diary tags: # 标签</li><li>PS3</li><li>Games</li></ul><h1 id="7-2-网站设置"><a href="#7-2-网站设置" class="headerlink" title="7.2 网站设置"></a>7.2 网站设置</h1><p>包括网站名称、描述、作者、链接样式等，全部在网站目录下的 _config.yml 文件中，参考官方文档按需要编辑。</p><p>注意：冒号后要加一个空格！</p><h1 id="7-3-更换主题"><a href="#7-3-更换主题" class="headerlink" title="7.3 更换主题"></a>7.3 更换主题</h1><p>在 Themes | Hexo 选择一个喜欢的主题，比如 NexT，进入网站目录打开 Git Bash Here 下载主题：</p><p>git clone <a href="https://github.com/iissnan/hexo-theme-next%EF%BC%8Cthemes/next">https://github.com/iissnan/hexo-theme-next，themes/next</a> 然后修改 _config.yml 中的 theme 为新主题名称 next，发布。（有的主题需要将 _config.yml 替换为主题自带的，参考主题说明。）</p><h1 id="7-4-常用命令"><a href="#7-4-常用命令" class="headerlink" title="7.4 常用命令"></a>7.4 常用命令</h1><p>hexo new “name” # 新建文章<br>hexo new page “name” # 新建页面<br>hexo g # 生成页面<br>hexo d # 部署<br>hexo g -d # 生成页面并部署<br>hexo s # 本地预览<br>hexo clean # 清除缓存和已生成的静态文件<br>hexo help # 帮助</p><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h2 id="7-4-1-Hexo-设置显示文章摘要，首页不显示全文"><a href="#7-4-1-Hexo-设置显示文章摘要，首页不显示全文" class="headerlink" title="7.4.1 Hexo 设置显示文章摘要，首页不显示全文"></a>7.4.1 Hexo 设置显示文章摘要，首页不显示全文</h2><p>Hexo 主页文章列表默认会显示文章全文，浏览时很不方便，可以在文章中插入  进行分段。</p><p>该代码前面的内容会作为摘要显示，而后面的内容会替换为 “Read More” 隐藏起来。</p><h2 id="7-4-2设置网站图标"><a href="#7-4-2设置网站图标" class="headerlink" title="7.4.2设置网站图标"></a>7.4.2设置网站图标</h2><p>进入 themes&#x2F;主题 文件夹，打开 _config.yml 配置文件，找到 favicon 修改，一般格式为：favicon: 图标地址。（不同主题可能略有差别）</p><h2 id="7-4-3修改并部署后没有效果"><a href="#7-4-3修改并部署后没有效果" class="headerlink" title="7.4.3修改并部署后没有效果"></a>7.4.3修改并部署后没有效果</h2><p>使用 hexo clean 清理后重新部署。</p><h2 id="7-4-4开启-HTTPS-后访问网站显示连接不安全？"><a href="#7-4-4开启-HTTPS-后访问网站显示连接不安全？" class="headerlink" title="7.4.4开启 HTTPS 后访问网站显示连接不安全？"></a>7.4.4开启 HTTPS 后访问网站显示连接不安全？</h2><p>证书还未部署生效，等待一会儿，清除浏览器缓存再试。</p><h2 id="7-4-5-Mac-安装-Hexo-报错无法安装"><a href="#7-4-5-Mac-安装-Hexo-报错无法安装" class="headerlink" title="7.4.5 Mac 安装 Hexo 报错无法安装"></a>7.4.5 Mac 安装 Hexo 报错无法安装</h2><p>Mac 用户需要管理员权限运行，使用 sudo npm install -g hexo-cli 命令安装。</p><h2 id="7-4-6npm-下载速度慢，甚至完全没反应"><a href="#7-4-6npm-下载速度慢，甚至完全没反应" class="headerlink" title="7.4.6npm 下载速度慢，甚至完全没反应"></a>7.4.6npm 下载速度慢，甚至完全没反应</h2><p>使用 npm 安装程序等待很久也没反应，或者下载速度很慢，可以更换 npm 源为国内 npm 镜像。</p><p>临时更换方法：在 npm 安装命令后面加上：<br>registry <a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>Hexo 是一种纯静态的博客，我们必须要在本地完成文章的编辑再部署到 GitHub 上，依赖于本地环境。不能像 WordPress 或 Typecho 那样的动态博客一样能直接在浏览器中完成撰文和发布。</p><p>可以说是一种比较极客的写博客方式，但是优势也是明显的——免费稳定省心，比较适合爱折腾研究的用户，或者没有在线发文需求的朋友。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;近些年来很多用户都喜欢使用 GitHub Pages 来搭建 Hexo 静态博客网站，其最吸引人的莫过于完全免费使用，并且非常稳定。&lt;/p&gt;
+&lt;p&gt;虽然搭建时比较麻烦，有点折腾，但是配置完成后，基本不需要操心维护的事，甚至放了几年都忘记了，打开来看文章依然还在。&lt;br&gt;本文
+      
+    
+    </summary>
+    
+    
+      <category term="智能家居" scheme="https://www.langya.org.cn/categories/smart/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.langya.org.cn/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="https://www.langya.org.cn/tags/GitHub/"/>
+    
+      <category term="butterfly" scheme="https://www.langya.org.cn/tags/butterfly/"/>
+    
+      <category term="博客搭建" scheme="https://www.langya.org.cn/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="教程" scheme="https://www.langya.org.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="blog" scheme="https://www.langya.org.cn/tags/blog/"/>
+    
+      <category term="cloudflare" scheme="https://www.langya.org.cn/tags/cloudflare/"/>
+    
+      <category term="免费" scheme="https://www.langya.org.cn/tags/%E5%85%8D%E8%B4%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小白教程 使用 Hexo+GitHub 搭建个人免费博客</title>
+    <link href="https://www.langya.org.cn/tech/4.html"/>
+    <id>https://www.langya.org.cn/tech/4.html</id>
+    <published>2026-04-20T06:00:00.000Z</published>
+    <updated>2026-04-22T08:08:35.125Z</updated>
+    
+    <content type="html"><![CDATA[<p>近些年来很多用户都喜欢使用 GitHub Pages 来搭建 Hexo 静态博客网站，其最吸引人的莫过于完全免费使用，并且非常稳定。</p><p>虽然搭建时比较麻烦，有点折腾，但是配置完成后，基本不需要操心维护的事，甚至放了几年都忘记了，打开来看文章依然还在。<br>本文就详细介绍下如何使用 Hexo + GitHub 搭建免费个人博客网站的教程。</p><p>为了照顾小白用户（第一次使用 GitHub 和 Hexo），尽可能详细，包括常见的坑和问题都有提示说明。下面目录中第 3~5 步为最重要的步骤，其他内容如果已经会的可以选择性跳过。</p><p>看起来有点繁杂，捋顺了倒也简单，认真跟教程走，完整操作一遍大概需要 30 分钟。</p><p>内容目录：</p><p>简介：GitHub Pages 和 Hexo &amp; 原理</p><p>准备：环境搭建 1.1. 注意事项 1.2. 环境搭建 连接 Github 创建 Github Pages 仓库 本地安装 Hexo 博客程序 4.1. 安装 Hexo 4.2. Hexo 初始化和本地预览 部署 Hexo 到 GitHub Pages 绑定域名（可选） 开始使用 7.1. 发布文章 7.2. 网站设置 7.3. 更换主题 7.4. 常用代码 常见问题 简介</p><h1 id="GitHub-Pages-是什么？"><a href="#GitHub-Pages-是什么？" class="headerlink" title="GitHub Pages 是什么？"></a>GitHub Pages 是什么？</h1><p>What is <a href="https://github.com/">GitHub</a> Pages? - GitHub Help GitHub Pages 是由 GitHub 官方提供的一种免费的静态站点托管服务，让我们可以在 GitHub 仓库里托管和发布自己的静态网站页面。</p><h1 id="Hexo-是什么？"><a href="#Hexo-是什么？" class="headerlink" title="Hexo 是什么？"></a>Hexo 是什么？</h1><p>官网：<a href="http://hexo.io/">hexo.io</a>Hexo 是一个快速、简洁且高效的静态博客框架，它基于 Node.js 运行，可以将我们撰写的 Markdown 文档解析渲染成静态的 HTML 网页。</p><h1 id="Hexo-GitHub-文章发布原理"><a href="#Hexo-GitHub-文章发布原理" class="headerlink" title="Hexo + GitHub 文章发布原理"></a>Hexo + GitHub 文章发布原理</h1><p>在本地撰写 Markdown 格式文章后，通过 Hexo 解析文档，渲染生成具有主题样式的 HTML 静态网页，再推送到 GitHub 上完成博文的发布。</p><h1 id="优点和不足"><a href="#优点和不足" class="headerlink" title="优点和不足"></a>优点和不足</h1><p>优点：完全免费；静态站点，轻量快速；可按需求自由定制改造；托管在 GitHub，安全省心；迁移方便……</p><p>不足：发文不便，依赖于本地环境；更适合个人博客使用；GitHub 在国内访问速度有点不快。</p><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>输入代码时，核对准确，最好切换成英文输入法； 将文中的 “用户名” 和 “邮箱” 替换为自己的 GitHub 账户名和绑定的邮箱； 统一使用 Git Bash 进行操作（支持 Win、Mac）； 小白请严格按步骤进行，不要跳！</p><h1 id="1-1环境搭建"><a href="#1-1环境搭建" class="headerlink" title="1.1环境搭建"></a>1.1环境搭建</h1><p>Hexo 基于 Node.js，搭建过程中还需要使用 npm（Node.js 已带） 和 git，因此先搭建本地操作环境，安装 Node.js 和 Git。</p><p>Node.js：<a href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a><br>Git：<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>下载 Node.js 和 Git 程序并安装，一路点 “下一步” 按默认配置完成安装。</p><p>安装完成后，Win+R 输入 cmd 并打开，依次输入 ​&#x3D;&#x3D;node -v&#x3D;&#x3D;​、&#x3D;&#x3D;npm -v&#x3D;&#x3D; 和&#x3D;&#x3D;​ git –version&#x3D;&#x3D; 并回车，出现程序版本号即可。</p><h1 id="1-2-注册GitHub"><a href="#1-2-注册GitHub" class="headerlink" title="1.2 注册GitHub"></a>1.2 注册GitHub</h1><p>连接 Github 使用邮箱注册 GitHub 账户，选择免费账户（Free），并完成邮件验证。</p><p>右键 -&gt; Git Bash Here，设置用户名和邮箱：</p><p>&#x3D;&#x3D;git config –global user.name “GitHub 用户名”&#x3D;&#x3D;&#x3D;&#x3D;git config –global user.email “GitHub 邮箱”&#x3D;&#x3D;创建 SSH 密匙：</p><p>输入​&#x3D;&#x3D;​ ssh-keygen -t rsa -C “GitHub 邮箱”&#x3D;&#x3D;​，然后一路回车。</p><p>添加密匙：</p><p>进入 [C:\Users\用户名.ssh] 目录（要勾选显示“隐藏的项目”），用记事本打开公钥 id_rsa.pub 文件并复制里面的内容。</p><p>登陆 GitHub ，进入 Settings 页面，选择左边栏的 SSH and GPG keys，点击 New SSH key。</p><p>Title 随便取个名字，粘贴复制的 id_rsa.pub 内容到 Key 中，点击 Add SSH key 完成添加。</p><p>验证连接：</p><p>打开 Git Bash，输入 &#x3D;&#x3D;ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#117;&#98;&#46;&#99;&#111;&#x6d;">git@github.com</a>&#x3D;&#x3D; 出现 “Are you sure……”，输入 yes 回车确认。</p><p>显示 “Hi xxx! You’ve successfully……” 即连接成功。</p><h1 id="1-3-创建GitHub-pages"><a href="#1-3-创建GitHub-pages" class="headerlink" title="1.3 创建GitHub pages"></a>1.3 创建GitHub pages</h1><p>创建 Github Pages 仓库 GitHub 主页右上角加号 -&gt; New repository：</p><p>Repository name 中输入 用户名.github.io 勾选 “Initialize this repository with a README” Description 选填 填好后点击 Create repository 创建。</p><p>创建后默认自动启用 HTTPS，博客地址为：https:&#x2F;&#x2F;用户名.github.io</p><p>#1.4 新建hexo本地程序<br>本地安装 Hexo 博客程序 新建一个文件夹用来存放 Hexo 的程序文件，如 Hexo-Blog。打开该文件夹，右键 -&gt; Git Bash Here。</p><h1 id="4-1-安装-Hexo"><a href="#4-1-安装-Hexo" class="headerlink" title="4.1 安装 Hexo"></a>4.1 安装 Hexo</h1><p>使用 npm 一键安装 Hexo 博客程序：</p><p>&#x3D;&#x3D;npm install -g hexo-cli&#x3D;&#x3D;Mac 用户需要管理员权限（sudo），运行这条命令：</p><p>&#x3D;&#x3D;sudo npm install -g hexo-cli&#x3D;&#x3D; 安装时间有点久（真的很慢！），界面也没任何反应，耐心等待。</p><h1 id="4-2-Hexo-初始化和本地预览"><a href="#4-2-Hexo-初始化和本地预览" class="headerlink" title="4.2 Hexo 初始化和本地预览"></a>4.2 Hexo 初始化和本地预览</h1><p>初始化并安装所需组件：</p><p>&#x3D;&#x3D;hexo init ​&#x3D;&#x3D; # 初始化 &#x3D;&#x3D;npm install&#x3D;&#x3D; # 安装组件 完成后依次输入下面命令，启动本地服务器进行预览：</p><p>&#x3D;&#x3D;hexo g&#x3D;&#x3D; # 生成页面 &#x3D;&#x3D;hexo s&#x3D;&#x3D; # 启动预览 访问 <a href="http://localhost:4000%EF%BC%8C%E5%87%BA%E7%8E%B0">http://localhost:4000，出现</a> Hexo 默认页面，本地博客安装成功！</p><p>Tips：如果出现页面加载不出来，可能是端口被占用了。Ctrl+C 关闭服务器，运行 hexo server -p 5000 更改端口号后重试。</p><p>Hexo 博客文件夹目录结构如下：</p><h1 id="5-部署"><a href="#5-部署" class="headerlink" title="5. 部署"></a>5. 部署</h1><p>部署Hexo 到 GitHub Pages 本地博客测试成功后，就是上传到 GitHub 进行部署，使其能够在网络上访问。</p><p>首先安装 hexo-deployer-git：</p><p>&#x3D;&#x3D;npm install hexo-deployer-git –save&#x3D;&#x3D; 然后修改 _config.yml 文件末尾的 Deployment 部分，修改成如下：</p><p>deploy: type: git repository: <a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;">git@github.com</a>:用户名&#x2F;用户名.github.io.git branch: master 完成后运行 hexo d 将网站上传部署到 GitHub Pages。</p><p>完成！这时访问我们的 GitHub 域名 https:&#x2F;&#x2F;用户名.github.io 就可以看到 Hexo 网站了。</p><ol start="6"><li>绑定域名（可选） 博客搭建完成使用的是 GitHub 的子域名 用户名.<a href="http://github.io,我们可以为/">http://github.io，我们可以为</a> Hexo 博客绑定自己的域名替换 GitHub 域名，更加个性化和专业，也利于 SEO。</li></ol><p>我们使用 Namesilo 进行注册，便宜好用没啥套路，使用优惠码 okoff 优惠一美元，com 域名大概 50 块一年。</p><h1 id="6-1-域名注册和解析"><a href="#6-1-域名注册和解析" class="headerlink" title="6.1 域名注册和解析"></a>6.1 域名注册和解析</h1><p>域名注册和解析教程：Namesilo 域名购买及使用教程 按上面教程注册并解析域名，在 DNS 设置部分，删除自带的记录，然后添加 CNAME 记录将 www 域名解析指向 用户名.github.io。</p><h1 id="6-2-绑定域名到-Hexo-博客"><a href="#6-2-绑定域名到-Hexo-博客" class="headerlink" title="6.2 绑定域名到 Hexo 博客"></a>6.2 绑定域名到 Hexo 博客</h1><p>进入本地博客文件夹的 source 目录，打开记事本，里面输入自己的域名，如  <a href="http://www.example.com,保存名称为/">www.example.com，保存名称为</a> “CNAME”，格式为 “所有文件”（无 .txt 后缀）。</p><p>清除缓存等文件并重新发布网站：</p><p>hexo clean # 清除缓存文件等 hexo g # 生成页面 hexo s # 启动预览 现在就可以使用自己的域名访问 Hexo 博客了。</p><h1 id="6-3-开启-HTTPS"><a href="#6-3-开启-HTTPS" class="headerlink" title="6.3 开启 HTTPS"></a>6.3 开启 HTTPS</h1><p>配置自己的域名后，需要我们手动开启 HTTPS。打开博客所在 GitHub 仓库，Settings -&gt; 下拉找到 GitHub Pages -&gt; 勾选 Enforce HTTPS。</p><p>HTTPS 证书部署成功需要一定时间，等大概几分钟再访问域名，就可以看到域名前面的小绿锁了，HTTPS 配置完成！</p><h1 id="7-1-发布文章"><a href="#7-1-发布文章" class="headerlink" title="7.1 发布文章"></a>7.1 发布文章</h1><p>进入博客所在目录，右键打开 Git Bash Here，创建博文：</p><p>hexo new “My New Post” 然后 source 文件夹中会出现一个 My New Post.md 文件，就可以使用 Markdown 编辑器在该文件中撰写文章了。</p><p>写完后运行下面代码将文章渲染并部署到 GitHub Pages 上完成发布。以后每次发布文章都是这两条命令。</p><p>hexo g # 生成页面 hexo d # 部署发布 也可以不使用命令自己创建 .md 文件，只需在文件开头手动加入如下格式 Front-matter 即可，写完后运行 hexo g 和 hexo d 发布。</p><p>title: Hello World # 标题 date: 2019&#x2F;3&#x2F;26 hh:mm:ss # 时间 categories: # 分类</p><ul><li>Diary tags: # 标签</li><li>PS3</li><li>Games</li></ul><h1 id="7-2-网站设置"><a href="#7-2-网站设置" class="headerlink" title="7.2 网站设置"></a>7.2 网站设置</h1><p>包括网站名称、描述、作者、链接样式等，全部在网站目录下的 _config.yml 文件中，参考官方文档按需要编辑。</p><p>注意：冒号后要加一个空格！</p><h1 id="7-3-更换主题"><a href="#7-3-更换主题" class="headerlink" title="7.3 更换主题"></a>7.3 更换主题</h1><p>在 Themes | Hexo 选择一个喜欢的主题，比如 NexT，进入网站目录打开 Git Bash Here 下载主题：</p><p>git clone <a href="https://github.com/iissnan/hexo-theme-next%EF%BC%8Cthemes/next">https://github.com/iissnan/hexo-theme-next，themes/next</a> 然后修改 _config.yml 中的 theme 为新主题名称 next，发布。（有的主题需要将 _config.yml 替换为主题自带的，参考主题说明。）</p><h1 id="7-4-常用命令"><a href="#7-4-常用命令" class="headerlink" title="7.4 常用命令"></a>7.4 常用命令</h1><p>hexo new “name” # 新建文章<br>hexo new page “name” # 新建页面<br>hexo g # 生成页面<br>hexo d # 部署<br>hexo g -d # 生成页面并部署<br>hexo s # 本地预览<br>hexo clean # 清除缓存和已生成的静态文件<br>hexo help # 帮助</p><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h2 id="7-4-1-Hexo-设置显示文章摘要，首页不显示全文"><a href="#7-4-1-Hexo-设置显示文章摘要，首页不显示全文" class="headerlink" title="7.4.1 Hexo 设置显示文章摘要，首页不显示全文"></a>7.4.1 Hexo 设置显示文章摘要，首页不显示全文</h2><p>Hexo 主页文章列表默认会显示文章全文，浏览时很不方便，可以在文章中插入  进行分段。</p><p>该代码前面的内容会作为摘要显示，而后面的内容会替换为 “Read More” 隐藏起来。</p><h2 id="7-4-2设置网站图标"><a href="#7-4-2设置网站图标" class="headerlink" title="7.4.2设置网站图标"></a>7.4.2设置网站图标</h2><p>进入 themes&#x2F;主题 文件夹，打开 _config.yml 配置文件，找到 favicon 修改，一般格式为：favicon: 图标地址。（不同主题可能略有差别）</p><h2 id="7-4-3修改并部署后没有效果"><a href="#7-4-3修改并部署后没有效果" class="headerlink" title="7.4.3修改并部署后没有效果"></a>7.4.3修改并部署后没有效果</h2><p>使用 hexo clean 清理后重新部署。</p><h2 id="7-4-4开启-HTTPS-后访问网站显示连接不安全？"><a href="#7-4-4开启-HTTPS-后访问网站显示连接不安全？" class="headerlink" title="7.4.4开启 HTTPS 后访问网站显示连接不安全？"></a>7.4.4开启 HTTPS 后访问网站显示连接不安全？</h2><p>证书还未部署生效，等待一会儿，清除浏览器缓存再试。</p><h2 id="7-4-5-Mac-安装-Hexo-报错无法安装"><a href="#7-4-5-Mac-安装-Hexo-报错无法安装" class="headerlink" title="7.4.5 Mac 安装 Hexo 报错无法安装"></a>7.4.5 Mac 安装 Hexo 报错无法安装</h2><p>Mac 用户需要管理员权限运行，使用 sudo npm install -g hexo-cli 命令安装。</p><h2 id="7-4-6npm-下载速度慢，甚至完全没反应"><a href="#7-4-6npm-下载速度慢，甚至完全没反应" class="headerlink" title="7.4.6npm 下载速度慢，甚至完全没反应"></a>7.4.6npm 下载速度慢，甚至完全没反应</h2><p>使用 npm 安装程序等待很久也没反应，或者下载速度很慢，可以更换 npm 源为国内 npm 镜像。</p><p>临时更换方法：在 npm 安装命令后面加上：<br>registry <a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>Hexo 是一种纯静态的博客，我们必须要在本地完成文章的编辑再部署到 GitHub 上，依赖于本地环境。不能像 WordPress 或 Typecho 那样的动态博客一样能直接在浏览器中完成撰文和发布。</p><p>可以说是一种比较极客的写博客方式，但是优势也是明显的——免费稳定省心，比较适合爱折腾研究的用户，或者没有在线发文需求的朋友。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;近些年来很多用户都喜欢使用 GitHub Pages 来搭建 Hexo 静态博客网站，其最吸引人的莫过于完全免费使用，并且非常稳定。&lt;/p&gt;
+&lt;p&gt;虽然搭建时比较麻烦，有点折腾，但是配置完成后，基本不需要操心维护的事，甚至放了几年都忘记了，打开来看文章依然还在。&lt;br&gt;本文
+      
+    
+    </summary>
+    
+    
+      <category term="技术笔记" scheme="https://www.langya.org.cn/categories/tech/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.langya.org.cn/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="https://www.langya.org.cn/tags/GitHub/"/>
+    
+      <category term="butterfly" scheme="https://www.langya.org.cn/tags/butterfly/"/>
+    
+      <category term="博客搭建" scheme="https://www.langya.org.cn/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="教程" scheme="https://www.langya.org.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="blog" scheme="https://www.langya.org.cn/tags/blog/"/>
+    
+      <category term="cloudflare" scheme="https://www.langya.org.cn/tags/cloudflare/"/>
+    
+      <category term="免费" scheme="https://www.langya.org.cn/tags/%E5%85%8D%E8%B4%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 搭建属于自己的博客系统</title>
+    <link href="https://www.langya.org.cn/tech/3.html"/>
+    <id>https://www.langya.org.cn/tech/3.html</id>
+    <published>2026-04-18T05:00:00.000Z</published>
+    <updated>2026-04-25T12:47:08.455Z</updated>
+    
+    <content type="html"><![CDATA[<p>打开cmd</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;打开cmd&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/spa
+      
+    
+    </summary>
+    
+    
+      <category term="技术笔记" scheme="https://www.langya.org.cn/categories/tech/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.langya.org.cn/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="https://www.langya.org.cn/tags/GitHub/"/>
+    
+      <category term="butterfly" scheme="https://www.langya.org.cn/tags/butterfly/"/>
+    
+      <category term="博客搭建" scheme="https://www.langya.org.cn/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="教程" scheme="https://www.langya.org.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="blog" scheme="https://www.langya.org.cn/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网站搭建完成！</title>
+    <link href="https://www.langya.org.cn/tech/2.html"/>
+    <id>https://www.langya.org.cn/tech/2.html</id>
+    <published>2026-04-17T14:00:00.000Z</published>
+    <updated>2026-04-26T03:47:44.531Z</updated>
+    
+    <content type="html"><![CDATA[<p>网站搭建完成，欢迎访问我的网站！</p><p>网站基于<a href="https://hexo.io/zh-cn/">Hexo</a>框架，<a href="https://github.com/jerryc127/hexo-theme-butterfly">butterfly</a>  主题，<a href="https://github.com/">GitHub</a>托管， <a href="https://www.cloudflare.com/">Cloudflare</a> CDN加速。</p><p><a href="https://www.langya.org.cn/">https://www.langya.org.cn</a></p><p>o(<em>￣︶￣</em>)o</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;网站搭建完成，欢迎访问我的网站！&lt;/p&gt;
+&lt;p&gt;网站基于&lt;a href=&quot;https://hexo.io/zh-cn/&quot;&gt;Hexo&lt;/a&gt;框架，&lt;a href=&quot;https://github.com/jerryc127/hexo-theme-butterfly&quot;&gt;butte
+      
+    
+    </summary>
+    
+    
+      <category term="技术笔记" scheme="https://www.langya.org.cn/categories/tech/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.langya.org.cn/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="https://www.langya.org.cn/tags/GitHub/"/>
+    
+      <category term="butterfly" scheme="https://www.langya.org.cn/tags/butterfly/"/>
+    
+      <category term="博客搭建" scheme="https://www.langya.org.cn/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="教程" scheme="https://www.langya.org.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="blog" scheme="https://www.langya.org.cn/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://www.langya.org.cn/tech/1.html"/>
+    <id>https://www.langya.org.cn/tech/1.html</id>
+    <published>2026-04-17T12:00:00.000Z</published>
+    <updated>2026-04-25T12:51:54.103Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! </p><p><img src="https://img.langya.org.cn/images/2026/04/1777121453" alt="hello world"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.langya.org.cn/images/2026/04/1777121453&quot; alt=&quot;hello world&quot;&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="技术笔记" scheme="https://www.langya.org.cn/categories/tech/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.langya.org.cn/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="https://www.langya.org.cn/tags/GitHub/"/>
+    
+      <category term="butterfly" scheme="https://www.langya.org.cn/tags/butterfly/"/>
+    
+  </entry>
+  
+</feed>

@@ -3,6 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
+# 站点编码设置
+encoding: utf-8
+
+
 title: 琅琊散记のBLOG
 subtitle: 技术分享 & 记录生活
 description: 一个不会写代码会画画的运营，分享日常生活，爱养猫，爱钓鱼，爱养花，爱分享。
@@ -137,11 +141,12 @@ sitemap:
   path: sitemap.xml
   rel: false
 
-# RSS订阅（可选）
+
 feed:
   enable: true
   type: atom
   path: atom.xml
+  charset: UTF-8
   limit: 20
-  hub:
-  content:
+  order_by: -date
+  content: true

@@ -222,9 +222,7 @@ footer:
   copyright:
     enable: false
     version: false
-  custom_text: "<div style='text-align:center'>© 2025-2026 琅琊 | 保留所有权利</div>"
- 
-
+  custom_text: '<div style="text-align:center;color:#fff;font-size:14px;">© 2025-2026 琅琊 | 保留所有权利 <a href="/atom.xml" target="_blank" style="margin:0 8px;color:#fff;text-decoration:none;">RSS订阅</a> | <a href="/sitemap.xml" target="_blank" style="margin:0 8px;color:#fff;text-decoration:none;">站点地图</a></div>'
 
 # 文章封面图
   
